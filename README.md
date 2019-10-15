@@ -8,7 +8,7 @@ Now it's possible to digitize all buildings in the World using Computer vision a
 Our first target domain is Russian territory. We are going to update information on the dataset coverage and to provide some metrics on the comparison with OSM data. At the beginning it contains more than 36,5 mln buildings.
 
 ## Emergency Mapping contribution
-The data is used fro Emergency Mapping response like in [Irkutsk region, Russia, that was heavily flooded in summer 2019](https://geoalert.github.io/Irkutsk-flood/) - so we will appreciate any related contribution and data requests.
+The data is used for Emergency Mapping response like in [Irkutsk region, Russia, that was heavily flooded in summer 2019](https://geoalert.github.io/Irkutsk-flood/) - so we will appreciate any related contribution and data requests.
 
 Please check for the issues or contact us directly at [hello@geoalert.io](mailto:hello@geoalert.io)
 
@@ -94,3 +94,5 @@ The input data is copyrighted by data providers but is not distributed along wit
 ## Technical details
 * Coordinate reference system - EPSG: 4326
 * Data format - GeoPackage file (or GeoJSON)
+
+## References
