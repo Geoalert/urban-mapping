@@ -40,7 +40,7 @@ Here is the generalized classification of buildings by most confident types we p
    </td>
    <td>Residential building
    </td>
-   <td>Roofs (not footprints!) of apartment buildings. Shoud have 5+ storeys.
+   <td>Roofs (not "footprints") of apartment multistorey buildings (shoud have at least 3+ storeys). Low floor apartment blocks in high density residential areas. 
    </td>
    <td><img src="https://aeronetlab.space/img/class_img/101.png"/>
    </td>
@@ -54,6 +54,7 @@ Here is the generalized classification of buildings by most confident types we p
    <td>House
    </td>
    <td>
+    Private houses. Usualy corresponds to the single household.
    </td>
    <td><img src="https://aeronetlab.space/img/class_img/102.png" />
    </td>
