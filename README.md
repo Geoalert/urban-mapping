@@ -104,3 +104,4 @@ The input data is copyrighted by data providers but is not distributed along wit
 ## References
 * [Microsoft buildings footprints](https://github.com/microsoft/USBuildingFootprints)
 * [RapID - Facebook editor for Openstreetmap](https://github.com/facebookincubator/RapiD)
+* Project is supported by [Skolkovo Institue of Science and Technology](https://www.skoltech.ru/en)
