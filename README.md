@@ -7,6 +7,12 @@ Now it's possible to digitize all buildings in the World using Computer vision a
 ## Ongoing progress
 Our first target domain is Russian territory. We are going to update information on the dataset coverage and to provide some metrics on the comparison with OSM data. At the beginning it contains more than 36,5 mln buildings.
 
+![](https://geoalert.io/img/urban/urban_coverage.png)
+
+|Open datasets|Building heights|Geometry|Feature count|Format|Size|
+|------------|----------|----------|-----------|------------|------------|
+|[Far East, Russia (part1)](https://minio.aeronetlab.space/public/datasets/urban_mapping/FarEast1.zip)||Simpified | 9,579 | GeoJSON | 0.8Mb |
+
 ## Emergency Mapping contribution
 The data is used for Emergency Mapping response like in [Irkutsk region, Russia, that was heavily flooded in summer 2019](https://geoalert.github.io/Irkutsk-flood/) - so we will appreciate any related contribution and data requests.
 
@@ -96,3 +102,5 @@ The input data is copyrighted by data providers but is not distributed along wit
 * Data format - GeoPackage file (or GeoJSON)
 
 ## References
+* [Microsoft buildings footprints](https://github.com/microsoft/USBuildingFootprints)
+* [RapID - Facebook editor for Openstreetmap](https://github.com/facebookincubator/RapiD)
