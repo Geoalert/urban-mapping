@@ -99,26 +99,26 @@ The input data is copyrighted by data providers but is not distributed along wit
 
 ## Technical details
 * Coordinate reference system - EPSG: 4326
-* Data format - GeoPackage file (or GeoJSON)
+* Data format - GeoPackage or GeoJSON files
 
-## Querying features with our http service
+### Querying features with our http API service
 It is possible to query the layer over http via this endpoint: `http://demo.geoalert.io/russia-buildings/geojson`.  
-Authorization via `basic` is required (contact us).  
-The output is geojson in `EPSG:4326`.  
+Authorization via `Basic Auth` is required.  
+The output is geojson file in `EPSG:4326`.  
 The service generates geojson features on-the-fly, producing a chunked stream as a http response. It should be safe to fetch reasonably large pieces of data.
 #
 The target area is specified by request params:  
 `bbox` in the format `[xmin, ymin, xmax, ymax]`  
 or  
 `polygon` in the geojson format  
-`srid` specifies the SRID of the bbox/polygon (optional, default is `4326`)  
+`srid` specifies the coordinate system reference ID of the bbox/polygon (default is `4326`)  
 #
 E.g.:  
-`http://178.57.73.151:8900/geojson?polygon={"type":"Polygon","coordinates":[[[37.29962647696191,55.64732925994261],[37.29962647696191,55.579658422801145],[37.39575684805566,55.579658422801145],[37.39575684805566,55.64732925994261],[37.29962647696191,55.64732925994261]]]}`  
-or  
-`http://178.57.73.151:8900/geojson?bbox=[4152175.426194705, 7475188.589286174, 4162876.6101546297, 7488526.850721938]&srid=3857`
+`.../geojson?polygon={"type":"Polygon","coordinates":[[[37.29962647696191,55.64732925994261],[37.29962647696191,55.579658422801145],[37.39575684805566,55.579658422801145],[37.39575684805566,55.64732925994261],[37.29962647696191,55.64732925994261]]]}`  
+  
+`.../geojson?bbox=[4152175.426194705, 7475188.589286174, 4162876.6101546297, 7488526.850721938]&srid=3857`
 
 ## References
 * [Microsoft buildings footprints](https://github.com/microsoft/USBuildingFootprints)
 * [RapID - Facebook editor for Openstreetmap](https://github.com/facebookincubator/RapiD)
-* Project is supported by [Skolkovo Institue of Science and Technology](https://www.skoltech.ru/en)
+* The project is supported by [Skolkovo Institue of Science and Technology](https://www.skoltech.ru/en)
