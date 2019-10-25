@@ -105,9 +105,9 @@ The input data is copyrighted by data providers but is not distributed along wit
 * Coordinate reference system - EPSG: 4326
 * Data format - GeoPackage or GeoJSON files
 
-### Querying features through our http API service
-It is possible to query the layer over http via the endpoint: `http://demo.geoalert.io/russia-buildings/geojson`.  
-Authorization via `Basic Auth` is required.  
+### Querying features through http API service
+It is possible to query processed "Urban Mapping" data over http via the endpoint: `http://demo.geoalert.io/russia-buildings/geojson`.  
+! Authorization via `Basic Auth` is required.  
 The output is geojson file in `EPSG:4326`.  
 The service fetches geojson features, producing a chunked stream as an http response. It should be safe to fetch reasonably large chunks of data.
 #
