@@ -9,7 +9,7 @@ Our first target domain is Russian territory. We are going to update information
 
 ![](https://geoalert.io/img/urban/urban_coverage.png)
 
-Plese refer to the grid IDs numbers at the scheme below to download the appropriate datasets.
+Please refer to the grid IDs at the scheme below to download the appropriate datasets.
 
 ![Russia grid](https://i.ibb.co/cTGx8sV/russia-grid.png)
 
