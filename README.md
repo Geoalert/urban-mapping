@@ -106,7 +106,7 @@ The input data is copyrighted by data providers but is not distributed along wit
 * Data format - GeoPackage or GeoJSON files
 
 ### Querying features through http API service
-It is possible to query processed "Urban Mapping" data over http via the endpoint: `http://demo.geoalert.io/russia-buildings/geojson`.  
+It is possible to query processed "Urban Mapping" data over http via the endpoint: `http://demo.geoalert.io/russia-buildings/geojson?`.  
 ! Authorization via `Basic Auth` is required.  
 The output is geojson file in `EPSG:4326`.  
 The service fetches geojson features, producing a chunked stream as an http response. It should be safe to fetch reasonably large chunks of data.
@@ -119,9 +119,9 @@ or
 #
 E.g. queries: 
   
-* `.../geojson?bbox=[4152175.426194705, 7475188.589286174, 4162876.6101546297, 7488526.850721938]&srid=3857`
+* `...bbox=[4152175.426194705, 7475188.589286174, 4162876.6101546297, 7488526.850721938]&srid=3857`
 
-* `.../geojson?polygon={"type":"Polygon","coordinates":[[[37.29962647696191,55.64732925994261],[37.29962647696191,55.579658422801145],[37.39575684805566,55.579658422801145],[37.39575684805566,55.64732925994261],[37.29962647696191,55.64732925994261]]]}`  
+* `...polygon={"type":"Polygon","coordinates":[[[37.29962647696191,55.64732925994261],[37.29962647696191,55.579658422801145],[37.39575684805566,55.579658422801145],[37.39575684805566,55.64732925994261],[37.29962647696191,55.64732925994261]]]}`  
 
 
 ## References
