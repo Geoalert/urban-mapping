@@ -11,11 +11,12 @@ Our first target domain is Russian territory. We are going to update information
 
 Please refer to the grid IDs at the scheme below to download the appropriate datasets.
 
-![Russia grid](https://i.ibb.co/cTGx8sV/russia-grid.png)
+![Russia grid](https://i.ibb.co/y0TLmtg/russia-dataset-nov2019.png)
 
-|ID|Open datasets|Building heights|Geometry|Feature count|Format|Size (Unzipped)|
+|GRID ID|Open datasets|Building heights|Geometry|Feature count|Format|Size (zipped)|
 |-------------|------------|----------|----------|-----------|------------|------------|
-|274|[Kaliningrad region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/grid/274.zip)||Simpified | 208,154| GeoPackage | 47Mb |
+|274|[Kaliningrad region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/kaliningrad_region_274.zip)| No | | 208,154| GeoPackage, GeoJSON | 40Mb |
+|286|[Smolensk region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/smolensk_region_286.zip)| No | | 208,154| GeoPackage, GeoJSON | 80Mb |
 
 ## Emergency Mapping contribution
 The data is used for Emergency Mapping response like in [Irkutsk region, Russia, that was heavily flooded in summer 2019](https://geoalert.github.io/Irkutsk-flood/) - so we will appreciate any related contribution and data requests.
@@ -107,21 +108,25 @@ The input data is copyrighted by data providers but is not distributed along wit
 
 ### Querying features through http API service
 It is possible to query processed "Urban Mapping" data over http via the endpoint: `http://demo.geoalert.io/russia-buildings/geojson?`.  
-! Authorization via `Basic Auth` is required.  
+! **Authorization** via `Basic Auth` is required.  
 The output is geojson file in `EPSG:4326`.  
 The service fetches geojson features, producing a chunked stream as an http response. It should be safe to fetch reasonably large chunks of data.
 #
-The target area is specified by request params:  
+The **target area** is specified by request params:  
 `bbox` in the format `[xmin, ymin, xmax, ymax]`  
 or  
-`polygon` in the geojson format  
-`srid` specifies the coordinate system reference ID of the bbox/polygon (default is `4326`)  
+`polygon` in the geojson format
+
+**additional params**
+
+`srid` specifies the coordinate system reference by EPSG ID of the bbox/polygon (default is `4326`, optional is `3857`)
+
+`points` [boolean] specifies if to get points geometry (buildings centroids) instead of polygons 
 #
-E.g. queries: 
-  
+E.g. queries:   
 * `http://demo.geoalert.io/russia-buildings/geojson?bbox=[4152175.426194705, 7475188.589286174, 4162876.6101546297, 7488526.850721938]&srid=3857`
 
-* `http://demo.geoalert.io/russia-buildings/geojson?polygon={"type":"Polygon","coordinates":[[[37.29962647696191,55.64732925994261],[37.29962647696191,55.579658422801145],[37.39575684805566,55.579658422801145],[37.39575684805566,55.64732925994261],[37.29962647696191,55.64732925994261]]]}`  
+* `http://demo.geoalert.io/russia-buildings/geojson?polygon={"type":"Polygon","coordinates":[[[37.29962647696191,55.64732925994261],[37.29962647696191,55.579658422801145],[37.39575684805566,55.579658422801145],[37.39575684805566,55.64732925994261],[37.29962647696191,55.64732925994261]]]}&points=true`  
 
 
 ## References
