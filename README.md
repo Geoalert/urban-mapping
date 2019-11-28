@@ -21,7 +21,7 @@ Please refer to the grid IDs at the scheme below to download the appropriate dat
 ## Emergency Mapping contribution
 The data is used for Emergency Mapping response like in [Irkutsk region, Russia, that was heavily flooded in summer 2019](https://geoalert.github.io/Irkutsk-flood/) - so we will appreciate any related contribution and data requests.
 
-Please check for the issues or contact us directly at [hello@geoalert.io](mailto:hello@geoalert.io)
+Please check for the [issues](https://github.com/Geoalert/urban-mapping/issues) or contact us directly by [hello@geoalert.io](mailto:hello@geoalert.io)
 
 ## Classification
 Here is the generalized classification of buildings by most confident types we propose in the datasets. This can be extended to more classes.
