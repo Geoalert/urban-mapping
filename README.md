@@ -5,7 +5,7 @@ Introduction
 Now it's possible to digitize all buildings in the World using Computer vision and Satellite imagery. This project is started to help accelerate the routine work of digitizing of the buildings and to fill the data gaps in Openstreetmap's open data.  
 
 ## Ongoing progress
-Our first target domain is Russian territory. We are going to update information on the dataset coverage and to provide some metrics on the comparison with OSM. At the moment it contains more than 36,5 mln buildings.
+Our first target domain is Russian territory. We are going to update information on the dataset coverage and to provide some metrics on the comparison with OSM. At the moment it contains more than 54 mln buildings.
 
 ![](https://geoalert.io/img/urban/urban_coverage.png)
 
