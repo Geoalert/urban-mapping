@@ -111,7 +111,7 @@ It is possible to query processed "Urban Mapping" data over http via the endpoin
 ! **Authorization** via `Basic Auth` is required.  
 The output is geojson file in `EPSG:4326`.  
 The service fetches geojson features, producing a chunked stream as an http response. It should be safe to fetch reasonably large chunks of data.
-#
+
 The **target area** is specified by request params:  
 `bbox` in the format `[xmin, ymin, xmax, ymax]`  
 or  
