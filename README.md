@@ -16,7 +16,7 @@ Please refer to the grid IDs at the scheme below to download the appropriate dat
 |GRID ID|Open datasets|Building heights|Geometry|Feature count|Format|Size (zipped)|
 |-------------|------------|----------|----------|-----------|------------|------------|
 |274|[Kaliningrad region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/kaliningrad_region_274.zip)| No | | 208,154| GeoPackage, GeoJSON | 40Mb |
-|286|[Smolensk region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/smolensk_region_286.zip)| No | | 208,154| GeoPackage, GeoJSON | 80Mb |
+|286|[Smolensk region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/smolensk_region_286.zip)| No | | 378,930| GeoPackage, GeoJSON | 80Mb |
 
 ## Emergency Mapping contribution
 The data is used for Emergency Mapping response like in [Irkutsk region, Russia, that was heavily flooded in summer 2019](https://geoalert.github.io/Irkutsk-flood/) - so we will appreciate any related contribution and data requests.
