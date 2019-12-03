@@ -121,18 +121,20 @@ or
 
 `srid` specifies the coordinate system reference by EPSG ID of the bbox/polygon (default is `4326`, optional is `3857`)
 
-`points` [boolean] specifies if to get points geometry (buildings centroids) instead of polygons 
+`points` [boolean] specifies if to get points geometry (buildings centroids) instead of polygons. Default is `false` 
 #
 E.g. queries:   
 *GET `https://demo.geoalert.io/russia-buildings/geojson?bbox=[4152175.426194705, 7475188.589286174, 4162876.6101546297, 7488526.850721938]&srid=3857`
 
 *GET `https://demo.geoalert.io/russia-buildings/geojson?polygon={"type":"Polygon","coordinates":[[[37.29962647696191,55.64732925994261],[37.29962647696191,55.579658422801145],[37.39575684805566,55.579658422801145],[37.39575684805566,55.64732925994261],[37.29962647696191,55.64732925994261]]]}&points=true`  
 
-*POST* requests are also supported (with the same endpoint url). Bbox or polygon must be supplied in the request body. Other request parameters work as with GET requests. This option may be useful for querying features by a complex polygon, which doesn't fit into URL character limit.
+*POST requests are also supported (with the same endpoint url). Bbox or polygon must be supplied in the request body. Other request parameters work as with GET requests. This option may be useful for querying features by a complex polygon, which doesn't fit into URL character limit.
 
 ## References
 * [Microsoft buildings footprints](https://github.com/microsoft/USBuildingFootprints)
 * [RapID - Facebook editor for Openstreetmap](https://github.com/facebookincubator/RapiD)
 * [Comparison of MS buildings footprints and Openstreetmap by Azavea](https://demos.azavea.com/building-footprint-comparison/)
 ---------------------------
-* Our project is supported by [Skolkovo Institue of Science and Technology](https://www.skoltech.ru/en)
+* Our project is supported by [Skolkovo Institute of Science and Technology](https://www.skoltech.ru/en)
+
+<image src="https://cdn.skoltech.ru/img/logo.png" width="190">
