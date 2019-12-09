@@ -1,0 +1,22 @@
+{
+  "name": "urban-mapping-embedded-map",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url ./ --no-source-maps",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.7.5",
+    "bulma": "^0.8.0",
+    "gh-pages": "^2.1.1",
+    "node-sass": "^4.13.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.7"
+  },
+  "keywords": []
+}

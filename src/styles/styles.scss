@@ -1,0 +1,102 @@
+@import "./settings";
+@import "./helpers";
+@import "./grid";
+@import "./animations";
+
+body {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("../images/bg-desktop.jpg") center / cover !important;
+  overflow: hidden;
+  @media (max-width: 512px) {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 90%;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0) !important;
+  padding: 2rem !important;
+}
+
+#map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../images/bg-desktop.jpg") center / cover !important;
+}
+
+#header {
+  position: absolute;
+  width: 100%;
+}
+
+#bg-loader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg-desktop.jpg") center / cover !important;
+
+  @media (max-width: 768px) {
+    background: url("../images/bg-tablet.jpg") center / cover !important;
+  }
+  @media (max-width: 512px) {
+    background: url("../images/bg-mobile.jpg") center / cover !important;
+  }
+  &.loaded {
+    animation: vanish-bg 3.5s ease forwards;
+    animation-fill-mode: forwards;
+  }
+}
+
+#logo {
+  max-width: 10rem;
+}
+
+a.navbar-item:hover {
+  color: black !important;
+}
+
+#modal {
+  display: none;
+}
+#modal:target {
+  display: flex;
+}
+
+$btn-border: 1px solid gray;
+
+#footer-controls {
+  @at-root .button {
+    min-width: 9rem;
+    box-shadow: 0 0 0 0.05rem white;
+  }
+  @at-root #d {
+    border-left: $btn-border;
+  }
+  @media (max-width: 512px) {
+    @at-root #e {
+      border-left: $btn-border;
+    }
+    @at-root .button {
+      min-width: 9.5rem;
+    }
+  }
+}

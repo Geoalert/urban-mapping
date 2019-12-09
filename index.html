@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GEOALERT Urban Mapping</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css"
+    /> -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.11.1/js/all.js"
+    ></script>
+
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="src/styles/debug.css" /> -->
+    <style></style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="bg-loader" class="loaded"></div>
+    <nav id="navbar" class="hero-head animated from-top">
+      <div class="columns is-mobile is-marginless heading has-text-weight-bold">
+        <div class="column left">
+          <figure class="navbar-item image">
+            <img id="logo" src="src/images/logo.png" />
+          </figure>
+        </div>
+        <div class="column right">
+          <a
+            href="https://geoalert.io/urban/index.html"
+            class="navbar-item has-text-white is-size-6-desktop"
+            >PLATFORM</a
+          >
+          <a href="#modal" class="navbar-item has-text-white is-size-6-desktop"
+            >ABOUT
+          </a>
+        </div>
+      </div>
+    </nav>
+    <header style="position: relative; width: 100%;">
+      <div
+        id="header"
+        class="has-text-centered single-spaced animated from-top"
+        style="top: 92px;"
+      >
+        <h2 class="subtitle is-4 has-text-weight-light has-text-white">
+          Geoalert
+        </h2>
+        <h1 class="title is-1 has-text-white">Urban Mapping</h1>
+      </div>
+    </header>
+
+    <section id="footer-info" class="footer center animated from-bottom">
+      <div id="grid-info" style="width: 768px;">
+        <div id="a" class="center-column">
+          <p class="has-text-centered has-text-white">
+            Now it's possible to digitize all buildings in the World<br />
+            using Computer vision and Satellite imagery.
+          </p>
+        </div>
+        <div id="b" class="center-column">
+          <p class="title has-text-white is-size-4-mobile">
+            <i
+              class="far fa-building has-text-grey-light"
+              style="width: 0.75em; height: 0.75em;"
+            ></i>
+            54<span class="is-size-4 is-size-5-mobile">M</span>
+          </p>
+          <p class="subtitle has-text-white is-7 has-text-centered">
+            CV generated buildings
+          </p>
+        </div>
+        <div id="c" class="center-column" style="border-left: 1px solid gray;">
+          <p class="title has-text-white is-size-4-mobile">
+            <i
+              class="fas fa-check has-text-grey-light"
+              style="width: 0.75em; height: 0.75em;"
+            ></i>
+            2<span class="is-size-4 is-size-5-mobile">M</span>
+          </p>
+          <p class="subtitle has-text-white is-7 has-text-centered">
+            Objects checked
+          </p>
+        </div>
+        <div id="d" class="center-column" style="border-left: 1px solid gray;">
+          <p class="title has-text-white is-size-4-mobile">
+            <i
+              class="fas fa-globe-americas has-text-grey-light"
+              style="width: 0.75em; height: 0.75em;"
+            ></i>
+            950<span class="is-size-4 is-size-5-mobile">K</span>
+          </p>
+          <p class="subtitle has-text-white is-7 has-text-centered">
+            Sq. km processed
+          </p>
+        </div>
+        <div id="e" class="center-column">
+          <button
+            id="explore"
+            class="button is-danger is-inverted is-rounded is-outlined has-text-weight-bold"
+            style="width: 100%; border: 0.15em solid white;"
+          >
+            Explore the map
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="footer-controls" class="footer center animated from-bottom">
+      <div id="grid-controls" style="width: 668px;">
+        <div id="a" class="center-column">
+          <p class="has-text-centered has-text-white has-text-weight-bold">
+            Switch basemap or data layer
+          </p>
+        </div>
+        <div id="b" class="center-column">
+          <button
+            id="dark"
+            class="basemap-toggle button is-dark is-focused is-medium is-inverted is-rounded is-outlined has-text-weight-bold"
+          >
+            <span class="icon">
+              <i class="fas fa-moon"></i>
+            </span>
+            <span>Dark</span>
+          </button>
+        </div>
+        <div id="c" class="center-column">
+          <button
+            id="satellite"
+            class="basemap-toggle button is-success is-medium is-inverted is-rounded is-outlined has-text-weight-bold"
+          >
+            <span class="icon">
+              <i class="fas fa-satellite"></i>
+            </span>
+            <span>Satellite</span>
+          </button>
+        </div>
+        <div id="d" class="center-column">
+          <button
+            id="gt"
+            class="datalayer-toggle button is-danger is-focused is-medium is-inverted is-rounded is-outlined has-text-weight-bold"
+          >
+            <span>Geoalert</span>
+          </button>
+        </div>
+        <div id="e" class="center-column">
+          <button
+            id="osm"
+            class="datalayer-toggle button is-info is-medium is-inverted is-rounded is-outlined has-text-weight-bold"
+          >
+            <span>OSM</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <div id="modal" class="modal">
+      <a href="#" class="modal-background"></a>
+      <div class="modal-content">
+        <div class="content is-medium has-text-white has-text-centered">
+          Each point on the map represents a single building extracted by the
+          neural networks from satellite images all over Russia. OSM layer shows
+          the state of the current mapping coverage of Russia (key:building)
+        </div>
+      </div>
+      <a href="#" class="modal-close is-large" aria-label="close"></a>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

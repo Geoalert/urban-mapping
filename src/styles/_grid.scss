@@ -1,0 +1,47 @@
+#a {
+  grid-area: a;
+}
+#b {
+  grid-area: b;
+}
+#c {
+  grid-area: c;
+}
+#d {
+  grid-area: d;
+}
+#e {
+  grid-area: e;
+}
+
+#grid-info {
+  display: grid;
+  grid-template-areas:
+    "a a a a"
+    "b c d e";
+
+  grid-row-gap: 1rem;
+  @media (max-width: 512px) {
+    grid-template-areas:
+      "a a a"
+      "b c d"
+      "e e e";
+  }
+}
+
+#grid-controls {
+  display: grid;
+  grid-template-areas:
+    "a a a a"
+    "b c d e";
+
+  grid-row-gap: 1rem;
+  grid-column-gap: 0.3rem;
+  @media (max-width: 512px) {
+    grid-column-gap: unset;
+    grid-template-areas:
+      "a a"
+      "b d"
+      "c e";
+  }
+}
