@@ -2,7 +2,9 @@ import {
   PALETTES,
   HEATMAP_ZERO,
   HEATMAP_SHADES,
-  pointSqrtCount
+  pointSqrtCount,
+  ZOOM_METHOD,
+  ZOOM_STEP
 } from "./constants";
 
 import { loadHeatLayer, loadCircleLayer } from "./layers";
@@ -122,3 +124,16 @@ export const switchDataLayers = (id, map, before, currentDataLayers) => {
   );
   return [heatId, circlesId];
 };
+
+const createZoomSetter = map => increase => {
+  map[ZOOM_METHOD]({ zoom: map.getZoom() + increase });
+};
+export function bindZoomEvents(map) {
+  const setZoom = createZoomSetter(map);
+  document.getElementById("zoom-in").addEventListener("click", function() {
+    setZoom(ZOOM_STEP);
+  });
+  document.getElementById("zoom-out").addEventListener("click", function() {
+    setZoom(-ZOOM_STEP);
+  });
+}

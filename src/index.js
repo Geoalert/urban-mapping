@@ -9,24 +9,36 @@ import {
   createInteractionsSwitcher,
   createLayersKeeper,
   switchDataLayers,
-  setBodyHeight
+  setBodyHeight,
+  bindZoomEvents
 } from "./utils";
 import { loadHeatLayer, loadCircleLayer } from "./layers";
 import { loadGTPointsSource, loadOSMPointsSource } from "./sources";
-import { STYLES, isDevelopment, Tokens } from "./constants";
+import {
+  STYLES,
+  isDevelopment,
+  Tokens,
+  START_EXPLORING_FLY_TIME,
+  START_EXPLORING_TARGET_ZOOM,
+  START_EXPLORING_TARGET_CENTER
+} from "./constants";
 
 const mapNode = document.getElementById("map");
 const info = document.getElementById("footer-info");
 const header = document.getElementById("header");
 const navbar = document.getElementById("navbar");
 const controls = document.getElementById("footer-controls");
+const zommControls = document.getElementById("zoom-controls");
 const showNavbar = () => (navbar.style.animationName = "appearsFromTop");
 const showHeader = () => (header.style.animationName = "appearsFromTop");
 const hideHeader = () => (header.style.animationName = "vanishToTop");
 const showInfo = () => (info.style.animationName = "appearsFromBottom");
 const hideInfo = () => (info.style.animationName = "vanishToBottom");
 const showControls = () => (controls.style.animationName = "appearsFromBottom");
-const hideControls = () => (info.style.animationName = "vanishToBottom");
+const showZoomControls = () =>
+  (zommControls.style.animationName = "appearsFromLeft");
+// const hideZoomControls = () => (controls.style.animationName = "vanishToLeft");
+// const hideControls = () => (info.style.animationName = "vanishToBottom");
 
 setBodyHeight();
 window.addEventListener("resize", setBodyHeight);
@@ -59,6 +71,7 @@ setTimeout(function() {
     // hash: true,
     attributionControl: false
   });
+  bindZoomEvents(map);
   switchInteractions = createInteractionsSwitcher(map);
   map.once("styledata", function() {
     removeLabels(map);
@@ -77,15 +90,16 @@ function startExploring() {
   hideHeader();
   hideInfo();
   showControls();
+  showZoomControls();
+  toggleBaseMap({ passedId: "satellite" });
   map.flyTo({
-    duration: 10000,
-    zoom: 15.65,
-    center: [37.162168, 55.698564]
+    duration: START_EXPLORING_FLY_TIME,
+    zoom: START_EXPLORING_TARGET_ZOOM,
+    center: START_EXPLORING_TARGET_CENTER
   });
   setTimeout(function() {
     switchInteractions(true);
     map.getCanvas().style.cursor = "";
-    toggleBaseMap({ passedId: "satellite" });
   }, 1500);
 }
 
@@ -104,7 +118,7 @@ function onStyleChanged(style) {
 }
 
 const baseMapTogglers = document.getElementsByClassName("basemap-toggle");
-let prevStyleId;
+let prevStyleId = "dark";
 function toggleBaseMap({ passedId }) {
   let id = passedId || this.id;
   if (id === prevStyleId) return;
@@ -115,7 +129,7 @@ function toggleBaseMap({ passedId }) {
 for (let t of baseMapTogglers) t.addEventListener("click", toggleBaseMap);
 
 const dataLayerTogglers = document.getElementsByClassName("datalayer-toggle");
-let prevLayerId;
+let prevLayerId = "gt";
 function toggleDataLayer() {
   let id = this.id;
   if (id === prevLayerId) return;

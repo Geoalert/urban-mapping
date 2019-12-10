@@ -59,3 +59,10 @@ export const circleOpacity = [
 ];
 export const circleRadius = ["interpolate", ["linear"], ["zoom"], 10, 2, 22, 4];
 export const circlesLayout = { "circle-sort-key": ["get", "sqrt_point_count"] };
+
+export const START_EXPLORING_FLY_TIME = 8500;
+export const START_EXPLORING_TARGET_ZOOM = 15.65;
+export const START_EXPLORING_TARGET_CENTER = [37.162168, 55.698564];
+
+export const ZOOM_STEP = 2;
+export const ZOOM_METHOD = "easeTo";
