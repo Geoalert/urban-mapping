@@ -8,7 +8,8 @@ import {
   getLabelsLayer,
   createInteractionsSwitcher,
   createLayersKeeper,
-  switchDataLayers
+  switchDataLayers,
+  setBodyHeight
 } from "./utils";
 import { loadHeatLayer, loadCircleLayer } from "./layers";
 import { loadGTPointsSource, loadOSMPointsSource } from "./sources";
@@ -27,10 +28,8 @@ const hideInfo = () => (info.style.animationName = "vanishToBottom");
 const showControls = () => (controls.style.animationName = "appearsFromBottom");
 const hideControls = () => (info.style.animationName = "vanishToBottom");
 
-window.addEventListener("resize", function() {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
-});
+setBodyHeight();
+window.addEventListener("resize", setBodyHeight);
 
 // showControls();
 showInfo();
