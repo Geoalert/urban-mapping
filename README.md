@@ -11,7 +11,7 @@ Our first target domain is Russian territory. We are going to update information
 
 Please refer to the grid IDs at the scheme below to download the appropriate datasets.
 
-![Russia grid](https://i.ibb.co/y0TLmtg/russia-dataset-nov2019.png)
+![Russia grid](https://i.ibb.co/T23CFWK/photo-2019-12-10-13-34-15.png)
 
 |GRID ID|Open datasets|Building heights|Geometry|Feature count|Format|Size (zipped)|
 |-------------|------------|----------|----------|-----------|------------|------------|
