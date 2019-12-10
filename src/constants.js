@@ -1,4 +1,4 @@
-import { buildHeatmapDencity } from "./utils";
+import { buildHeatmapDencity } from "./helpers";
 
 export const isDevelopment = process.env.NODE_ENV === "development";
 export const Tokens = {
@@ -58,11 +58,12 @@ export const circleOpacity = [
   1
 ];
 export const circleRadius = ["interpolate", ["linear"], ["zoom"], 10, 2, 22, 4];
-export const circlesLayout = { "circle-sort-key": ["get", "sqrt_point_count"] };
+export const circlesLayout = { "circle-sort-key": pointSqrtCount };
 
+export const THROTTLE_SWITCH_ACTIONS_DELAY = 700;
 export const START_EXPLORING_FLY_TIME = 8500;
-export const START_EXPLORING_TARGET_ZOOM = 15.65;
-export const START_EXPLORING_TARGET_CENTER = [37.162168, 55.698564];
+export const START_EXPLORING_TARGET_ZOOM = 15.52;
+export const START_EXPLORING_TARGET_CENTER = [37.207236, 55.644778];
 
 export const ZOOM_STEP = 2;
 export const ZOOM_METHOD = "easeTo";

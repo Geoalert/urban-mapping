@@ -11,7 +11,7 @@ import {
   switchDataLayers,
   setBodyHeight,
   bindZoomEvents
-} from "./utils";
+} from "./helpers";
 import { loadHeatLayer, loadCircleLayer } from "./layers";
 import { loadGTPointsSource, loadOSMPointsSource } from "./sources";
 import {
@@ -20,8 +20,10 @@ import {
   Tokens,
   START_EXPLORING_FLY_TIME,
   START_EXPLORING_TARGET_ZOOM,
-  START_EXPLORING_TARGET_CENTER
+  START_EXPLORING_TARGET_CENTER,
+  THROTTLE_SWITCH_ACTIONS_DELAY
 } from "./constants";
+import { throttle } from "./utils";
 
 const mapNode = document.getElementById("map");
 const info = document.getElementById("footer-info");
@@ -129,7 +131,12 @@ function toggleBaseMap({ passedId }) {
   for (let t of baseMapTogglers) t.classList.toggle("is-focused");
   setStyle(STYLES[id], onStyleChanged);
 }
-for (let t of baseMapTogglers) t.addEventListener("click", toggleBaseMap);
+const throttleToggleBaseMap = throttle(
+  toggleBaseMap,
+  THROTTLE_SWITCH_ACTIONS_DELAY
+);
+for (let t of baseMapTogglers)
+  t.addEventListener("click", throttleToggleBaseMap);
 
 const dataLayerTogglers = document.getElementsByClassName("datalayer-toggle");
 let prevLayerId = "gt";
@@ -145,4 +152,9 @@ function toggleDataLayer() {
     currentDataLayers
   );
 }
-for (let t of dataLayerTogglers) t.addEventListener("click", toggleDataLayer);
+const throttleToggleDataLayer = throttle(
+  toggleDataLayer,
+  THROTTLE_SWITCH_ACTIONS_DELAY
+);
+for (let t of dataLayerTogglers)
+  t.addEventListener("click", throttleToggleDataLayer);
