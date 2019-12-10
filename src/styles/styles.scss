@@ -84,18 +84,18 @@ a.navbar-item:hover {
 $btn-border: 1px solid gray;
 
 #footer-controls {
-  @at-root .button {
+  .button {
     min-width: 9rem;
     box-shadow: 0 0 0 0.05rem white;
   }
-  @at-root #d {
+  #d {
     border-left: $btn-border;
   }
   @media (max-width: 512px) {
-    @at-root #e {
+    #e {
       border-left: $btn-border;
     }
-    @at-root .button {
+    .button {
       min-width: 9.5rem;
     }
   }
