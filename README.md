@@ -38,12 +38,6 @@ Here is the generalized classification of buildings by most confident types we p
    </td>
   </tr>
 
-   <td colspan="4" >
-<h2>Buildings and Construction</h2>
-
-
-</td>
-  </tr>
   <tr>
    <td><p style="text-align: right">
 101</p>
