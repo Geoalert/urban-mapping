@@ -5,8 +5,8 @@
 
 body {
   position: relative;
-  background: url("../images/bg-desktop.jpg") center / cover !important;
   overflow: hidden;
+  // background: url("../images/bg-desktop.jpg") center / cover !important;
   // @media (max-width: 512px) {
   //   height: calc(var(--vh, 1vh) * 100);
   // }
@@ -36,7 +36,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../images/bg-desktop.jpg") center / cover !important;
+  // background: url("../images/bg-desktop.jpg") center / cover !important;
 }
 
 #header {

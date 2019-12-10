@@ -91,12 +91,15 @@ function startExploring() {
   hideInfo();
   showControls();
   showZoomControls();
-  toggleBaseMap({ passedId: "satellite" });
+
   map.flyTo({
     duration: START_EXPLORING_FLY_TIME,
     zoom: START_EXPLORING_TARGET_ZOOM,
     center: START_EXPLORING_TARGET_CENTER
   });
+  setTimeout(() => {
+    toggleBaseMap({ passedId: "satellite" });
+  }, 2500);
   setTimeout(function() {
     switchInteractions(true);
     map.getCanvas().style.cursor = "";
