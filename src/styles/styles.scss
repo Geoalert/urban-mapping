@@ -3,9 +3,14 @@
 @import "./grid";
 @import "./animations";
 
+html {
+  background: gray;
+}
+
 body {
   position: relative;
   overflow: hidden;
+  background: lightslategray;
   // background: url("../images/bg-desktop.jpg") center / cover !important;
   // @media (max-width: 512px) {
   //   height: calc(var(--vh, 1vh) * 100);
@@ -42,6 +47,10 @@ body {
 #header {
   position: absolute;
   width: 100%;
+  top: 92px;
+  @media (max-width: 512px) and (orientation: landscape) {
+    top: 52px;
+  }
 }
 
 #bg-loader {
