@@ -5,9 +5,12 @@ Introduction
 Now it's possible to digitize all buildings in the World using Computer vision and Satellite imagery. This project is started to help accelerate the routine work of digitizing of the buildings and to fill the data gaps in Openstreetmap's open data.  
 
 ## Ongoing progress
-Our first target domain is Russian territory. We are going to update information on the dataset coverage and to provide some metrics on the comparison with OSM. At the moment we reached the number of 54+MLN buildings.
 
-![](https://geoalert.io/img/urban/urban_coverage.png)
+In the demo map we transformed polygons into points (centroids) and compared them with Openstreetmap "state of the map" using vector tiles to visulalize both layers: [https://geoalert.github.io/urban-mapping/](https://geoalert.github.io/urban-mapping/)
+
+![](https://miro.medium.com/max/841/1*oxfp6u5iJXOFR26pB3lrow.gif)
+
+Our first target domain is Russian territory. We are going to update information on the dataset coverage and to provide some metrics on the comparison with OSM. At the moment we reached the number of 54+MLN buildings.
 
 Please refer to the grid IDs at the scheme below to download the appropriate datasets.
 
@@ -140,6 +143,7 @@ E.g. queries:
 *POST requests are also supported (with the same endpoint url). Bbox or polygon must be supplied in the request body. Other request parameters work as with GET requests. This option may be useful for querying features by a complex polygon, which doesn't fit into URL character limit.
 
 ## References
+* [Subscribe to our blog](https://medium.com/geoalert-platform-urban-monitoring/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4)
 * [Microsoft buildings footprints](https://github.com/microsoft/USBuildingFootprints)
 * [RapID - Facebook editor for Openstreetmap](https://github.com/facebookincubator/RapiD)
 * [Comparison of MS buildings footprints and Openstreetmap by Azavea](https://demos.azavea.com/building-footprint-comparison/)
