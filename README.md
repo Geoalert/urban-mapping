@@ -11,7 +11,7 @@ Our first target domain is Russian territory. We are going to update information
 
 Please refer to the grid IDs at the scheme below to download the appropriate datasets.
 
-![Russia grid](https://i.ibb.co/y0TLmtg/russia-dataset-nov2019.png)
+![Russia grid](https://i.ibb.co/T23CFWK/photo-2019-12-10-13-34-15.png)
 
 |GRID ID|Open datasets|Building heights|Geometry|Feature count|Format|Size (zipped)|
 |-------------|------------|----------|----------|-----------|------------|------------|
@@ -70,7 +70,8 @@ Here is the generalized classification of buildings by most confident types we p
    <td><img src="https://aeronetlab.space/img/class_img/102.png" />
    </td>
   </tr>
-  <tr>
+ 
+ <tr>
    <td><p style="text-align: right">
 103</p>
 
@@ -80,6 +81,20 @@ Here is the generalized classification of buildings by most confident types we p
    <td>Plants, etc.
    </td>
    <td><img src="https://aeronetlab.space/img/class_img/103.png" />
+   </td>
+  </tr>
+  
+  
+ <tr>
+   <td><p style="text-align: right">
+104</p>
+
+   </td>
+   <td>Commercial building
+   </td>
+   <td>Office buildings, Retail, supermarkets  etc.
+   </td>
+   <td>
    </td>
   </tr>
 
