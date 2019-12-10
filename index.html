@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-116991484-5"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-116991484-5");
+    </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GEOALERT Urban Mapping</title>
@@ -18,13 +33,13 @@
     />
 
     <!-- <link rel="stylesheet" href="src/styles/debug.css" /> -->
-    <!-- <style>
-      @media (max-width: 512px) {
-        body {
-          height: calc(var(--vh, 1vh) * 100);
-        }
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
       }
-    </style> -->
+    </style>
   </head>
   <body>
     <div id="map"></div>
@@ -169,7 +184,16 @@
         <div class="content is-medium has-text-white has-text-centered">
           Each point on the map represents a single building extracted by the
           neural networks from satellite images all over Russia. OSM layer shows
-          the state of the current mapping coverage of Russia (key:building)
+          the state of the current mapping coverage of Russia (key:building).
+          <br /><br />
+          Geoalert provides auto mapping buildings data that is available
+          through API. In this demo we transformed polygons into points
+          (centroids) and compared them with Openstreetmap "state of the map"
+          using vector tiles to visulalize both layers. Read more on
+          <a
+            href="https://medium.com/@geoalert/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4"
+            >our Blog</a
+          >
         </div>
       </div>
       <a href="#" class="modal-close is-large" aria-label="close"></a>
