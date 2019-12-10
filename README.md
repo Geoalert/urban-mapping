@@ -70,7 +70,8 @@ Here is the generalized classification of buildings by most confident types we p
    <td><img src="https://aeronetlab.space/img/class_img/102.png" />
    </td>
   </tr>
-  <tr>
+ 
+ <tr>
    <td><p style="text-align: right">
 103</p>
 
@@ -78,6 +79,20 @@ Here is the generalized classification of buildings by most confident types we p
    <td>Industrial building
    </td>
    <td>Plants, etc.
+   </td>
+   <td><img src="https://aeronetlab.space/img/class_img/103.png" />
+   </td>
+  </tr>
+  
+  
+ <tr>
+   <td><p style="text-align: right">
+104</p>
+
+   </td>
+   <td>Commercial building
+   </td>
+   <td>Office buildings, Retail, supermarkets  etc.
    </td>
    <td><img src="https://aeronetlab.space/img/class_img/103.png" />
    </td>
