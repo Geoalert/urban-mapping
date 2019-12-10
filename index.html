@@ -18,7 +18,13 @@
     />
 
     <!-- <link rel="stylesheet" href="src/styles/debug.css" /> -->
-    <style></style>
+    <!-- <style>
+      @media (max-width: 512px) {
+        body {
+          height: calc(var(--vh, 1vh) * 100);
+        }
+      }
+    </style> -->
   </head>
   <body>
     <div id="map"></div>
@@ -103,7 +109,7 @@
           <button
             id="explore"
             class="button is-danger is-inverted is-rounded is-outlined has-text-weight-bold"
-            style="width: 100%; border: 0.15em solid white;"
+            style="width: 100%;"
           >
             Explore the map
           </button>
@@ -120,7 +126,7 @@
         <div id="b" class="center-column">
           <button
             id="dark"
-            class="basemap-toggle button is-dark is-focused is-medium is-inverted is-rounded is-outlined has-text-weight-bold"
+            class="basemap-toggle button is-dark is-focused is-inverted is-rounded is-outlined has-text-weight-bold"
           >
             <span class="icon">
               <i class="fas fa-moon"></i>
@@ -131,7 +137,7 @@
         <div id="c" class="center-column">
           <button
             id="satellite"
-            class="basemap-toggle button is-success is-medium is-inverted is-rounded is-outlined has-text-weight-bold"
+            class="basemap-toggle button is-success is-inverted is-rounded is-outlined has-text-weight-bold"
           >
             <span class="icon">
               <i class="fas fa-satellite"></i>
@@ -142,7 +148,7 @@
         <div id="d" class="center-column">
           <button
             id="gt"
-            class="datalayer-toggle button is-danger is-focused is-medium is-inverted is-rounded is-outlined has-text-weight-bold"
+            class="datalayer-toggle button is-danger is-focused is-inverted is-rounded is-outlined has-text-weight-bold"
           >
             <span>Geoalert</span>
           </button>
@@ -150,7 +156,7 @@
         <div id="e" class="center-column">
           <button
             id="osm"
-            class="datalayer-toggle button is-info is-medium is-inverted is-rounded is-outlined has-text-weight-bold"
+            class="datalayer-toggle button is-info is-inverted is-rounded is-outlined has-text-weight-bold"
           >
             <span>OSM</span>
           </button>

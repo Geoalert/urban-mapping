@@ -9,9 +9,9 @@ body {
   position: relative;
   background: url("../images/bg-desktop.jpg") center / cover !important;
   overflow: hidden;
-  @media (max-width: 512px) {
-    height: calc(var(--vh, 1vh) * 100);
-  }
+  // @media (max-width: 512px) {
+  //   height: calc(var(--vh, 1vh) * 100);
+  // }
 }
 
 @media (max-width: 768px) {

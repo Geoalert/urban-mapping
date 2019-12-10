@@ -27,11 +27,10 @@ const hideInfo = () => (info.style.animationName = "vanishToBottom");
 const showControls = () => (controls.style.animationName = "appearsFromBottom");
 const hideControls = () => (info.style.animationName = "vanishToBottom");
 
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-const vhValue = document.documentElement.style.getPropertyValue("--vh");
-if (vhValue) document.documentElement.style.setProperty("--vh", `${vh}px`);
+// window.addEventListener("resize", function() {
+//   let vh = window.innerHeight * 0.01;
+//   document.documentElement.style.setProperty("--vh", `${vh}px`);
+// });
 
 // showControls();
 showInfo();
