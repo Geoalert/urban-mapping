@@ -94,7 +94,7 @@ Here is the generalized classification of buildings by most confident types we p
    </td>
    <td>Office buildings, Retail, supermarkets  etc.
    </td>
-   <td><img src="https://aeronetlab.space/img/class_img/103.png" />
+   <td>
    </td>
   </tr>
 
