@@ -3,18 +3,13 @@
 @import "./grid";
 @import "./animations";
 
-html {
-  background: gray;
-}
-
 body {
   position: relative;
   overflow: hidden;
-  background: lightslategray;
-  // background: url("../images/bg-desktop.jpg") center / cover !important;
-  // @media (max-width: 512px) {
-  //   height: calc(var(--vh, 1vh) * 100);
-  // }
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
 }
 
 @media (max-width: 768px) {
@@ -132,7 +127,7 @@ $btn-border: 1px solid gray;
 
 #go-down-caret {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   color: white;
