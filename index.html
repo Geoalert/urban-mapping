@@ -39,7 +39,7 @@
       body {
         width: 100%;
         height: 100vh;
-        height: calc(var(--vh, 1vh) * 100);
+        /* height: calc(var(--vh, 1vh) * 100); */
         overflow: hidden;
       }
     </style>
@@ -47,6 +47,9 @@
   <body>
     <div id="map"></div>
     <div id="bg-loader" class="loaded"></div>
+    <div id="go-down-caret" class="animated from-top">
+      <i class="fas fa-5x fa-angle-down"></i>
+    </div>
     <nav id="navbar" class="hero-head animated from-top">
       <div class="columns is-mobile is-marginless heading has-text-weight-bold">
         <div class="column left">

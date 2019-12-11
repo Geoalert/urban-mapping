@@ -39,7 +39,7 @@
 
 .animated {
   animation-duration: $showContentDuration;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 

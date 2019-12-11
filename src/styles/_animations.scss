@@ -81,3 +81,26 @@
     transform: translateY(-100%);
   }
 }
+
+@keyframes appearsFromTopAndVanishDelayIterations {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+    visibility: visible;
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+    visibility: hidden;
+  }
+}
