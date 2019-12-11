@@ -62,10 +62,8 @@ body {
   @media (max-width: 512px) {
     background: url("../images/bg-mobile.jpg") center / cover !important;
   }
-  &.loaded {
-    animation: vanish-bg 3.5s ease forwards;
-    animation-fill-mode: forwards;
-  }
+  animation: vanish-bg 4.2s ease forwards;
+  animation-fill-mode: forwards;
 }
 
 #logo {
