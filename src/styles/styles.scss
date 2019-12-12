@@ -84,13 +84,20 @@ a.navbar-item:hover {
   }
 }
 
-$btn-border: 1px solid gray;
-
 .button {
   box-shadow: 0 0 0 0.05rem white,
     // adds small blur to the border edges
       0 0 1px 0.07rem white,
     inset 0 0 1px 1px white;
+}
+
+#footer-info {
+  #c {
+    border-left: $btn-delimiter;
+  }
+  #d {
+    border-left: $btn-delimiter;
+  }
 }
 
 #footer-controls {
@@ -99,11 +106,11 @@ $btn-border: 1px solid gray;
     // box-shadow: 0 0 0 0.1rem white;
   }
   #d {
-    border-left: $btn-border;
+    border-left: $btn-delimiter;
   }
   @media (max-width: 512px) {
     #e {
-      border-left: $btn-border;
+      border-left: $btn-delimiter;
     }
     .button {
       min-width: 9.5rem;
