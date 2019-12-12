@@ -20,7 +20,6 @@ body {
   right: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0) !important;
-  padding: 2rem !important;
 }
 
 #map {
@@ -57,7 +56,7 @@ body {
   @media (max-width: 512px) {
     background: url("../images/bg-mobile.jpg") center / cover !important;
   }
-  animation: vanish-bg 4.2s ease forwards;
+  animation: vanish-bg 3.9s ease forwards;
   animation-fill-mode: forwards;
 }
 

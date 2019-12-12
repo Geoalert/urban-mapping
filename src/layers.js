@@ -11,10 +11,7 @@ import { circleOpacity, circlesLayout, circleRadius } from "./constants";
 export const removeDelay = 150;
 export function loadHeatLayer(
   map,
-  before,
-  id = "gt-heat",
-  source = "gt-points",
-  palette = PALETTES.red
+  { before, id = "gt-heat", source = "gt-points", palette = PALETTES.red }
 ) {
   map.addLayer(
     {
@@ -59,10 +56,7 @@ export function loadHeatLayer(
 
 export function loadCircleLayer(
   map,
-  before,
-  id = "gt-points",
-  source = "gt-points",
-  palette = PALETTES.red
+  { before, id = "gt-points", source = "gt-points", palette = PALETTES.red }
 ) {
   map.addLayer(
     {

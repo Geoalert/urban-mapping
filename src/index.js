@@ -61,7 +61,7 @@ exploreBtn.addEventListener("click", startExploring);
 let map,
   setStyle,
   switchInteractions,
-  labelsLayerId,
+  labelsLayerId = "road-label",
   currentDataLayers = [];
 
 const accessToken = isDevelopment ? Tokens.development : Tokens.production;
@@ -79,12 +79,16 @@ setTimeout(function() {
   bindZoomEvents(map);
   switchInteractions = createInteractionsSwitcher(map);
   map.once("styledata", function() {
+    // labelsLayerId = getLabelsLayer(map.getStyle());
     removeLabels(map);
-    labelsLayerId = getLabelsLayer(map.getStyle());
     loadGTPointsSource(map);
     loadOSMPointsSource(map);
-    const heatId = loadHeatLayer(map, labelsLayerId, "heat-gt", "points-gt");
-    const circlesId = loadCircleLayer(map, "heat-gt", "points-gt", "points-gt");
+    const heatId = loadHeatLayer(map, { id: "heat-gt", source: "points-gt" });
+    const circlesId = loadCircleLayer(map, {
+      before: "heat-gt",
+      source: "points-gt",
+      id: "points-gt"
+    });
     currentDataLayers = currentDataLayers.concat([heatId, circlesId]);
     switchInteractions(false);
     map.getCanvas().style.cursor = "default";
@@ -111,19 +115,20 @@ function startExploring() {
   }, 1500);
 }
 
-const keepLayers = [
-  { id: "points-gt", before: labelsLayerId },
-  { id: "points-osm", before: labelsLayerId },
+let keepLayers = [
   { id: "heat-gt", before: labelsLayerId },
-  { id: "heat-osm", before: labelsLayerId }
+  { id: "points-gt", before: "heat-gt" },
+  { id: "heat-osm", before: labelsLayerId },
+  { id: "points-osm", before: "heat-osm" }
 ];
 setTimeout(function() {
   setStyle = createLayersKeeper(map, keepLayers);
 }, 101);
 
-function onStyleChanged(style) {
-  labelsLayerId = getLabelsLayer(style);
-}
+// function onStyleChanged(style) {
+//   labelsLayerId = getLabelsLayer(style);
+//   console.log("labelsLayerId", labelsLayerId);
+// }
 
 const baseMapTogglers = document.getElementsByClassName("basemap-toggle");
 let prevStyleId = "dark";
@@ -132,7 +137,8 @@ function toggleBaseMap({ passedId }) {
   if (id === prevStyleId) return;
   prevStyleId = id;
   for (let t of baseMapTogglers) t.classList.toggle("is-focused");
-  setStyle(STYLES[id], onStyleChanged);
+  // labelsLayerId = getLabelsLayer(map.getStyle());
+  setStyle(STYLES[id]);
 }
 const throttleToggleBaseMap = throttle(
   toggleBaseMap,

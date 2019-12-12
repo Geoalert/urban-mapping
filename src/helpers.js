@@ -65,7 +65,10 @@ export const getCircleColor = colorSteps => [
   ...colorSteps
 ];
 
-export const createLayersKeeper = (map, keepLayers = []) => {
+export const createLayersKeeper = (map, keepLayers = []) => (
+  nextStyle,
+  onStyleChanged = () => {}
+) => {
   let layerIds = [],
     sourceIds = [],
     before = {};
@@ -78,44 +81,46 @@ export const createLayersKeeper = (map, keepLayers = []) => {
   const filterSources = id => sourceIds.some(s => id.startsWith(s));
   // const filterLayers = l => layerIds.indexOf(l.id) !== -1;
   // const filterSources = id => sourceIds.indexOf(id) !== -1;
-  return (nextStyle, onStyleChanged = () => {}) => {
-    const currentStyle = map.getStyle();
-    const dataLayers = currentStyle.layers.filter(filterLayers);
-    const dataSources = Object.keys(currentStyle.sources)
-      .filter(filterSources)
-      .reduce(
-        (acc, s) => ({
-          ...acc,
-          [s]: currentStyle.sources[s]
-        }),
-        {}
-      );
-    map.setStyle(nextStyle);
+  const currentStyle = map.getStyle();
+  const dataLayers = currentStyle.layers.filter(filterLayers);
+  const dataSources = Object.keys(currentStyle.sources)
+    .filter(filterSources)
+    .reduce(
+      (acc, s) => ({
+        ...acc,
+        [s]: currentStyle.sources[s]
+      }),
+      {}
+    );
+  map.setStyle(nextStyle);
 
-    map.once("styledata", () => {
-      const style = map.getStyle();
-      onStyleChanged(style);
-      const layers = style.layers;
-      const nextLayerIds = layers.map(({ id }) => id);
-      Object.keys(dataSources).forEach(s => map.addSource(s, dataSources[s]));
-      dataLayers.forEach(l => {
-        const boforeIndex = nextLayerIds.indexOf(before[l.id]);
-        map.addLayer(l, boforeIndex !== -1 ? before[l.id] : undefined);
-        layers.splice(boforeIndex, 0);
-      });
+  map.once("styledata", () => {
+    const style = map.getStyle();
+    const layers = style.layers;
+    const nextLayerIds = layers.map(({ id }) => id);
+    Object.keys(dataSources).forEach(s => map.addSource(s, dataSources[s]));
+    dataLayers.forEach(l => {
+      console.log(keepLayers);
+      const boforeIndex = nextLayerIds.indexOf(before[l.id]);
+      map.addLayer(l, boforeIndex !== -1 ? before[l.id] : undefined);
+      layers.splice(boforeIndex, 0);
     });
-  };
+    onStyleChanged(map.getStyle());
+  });
 };
 
 export const switchDataLayers = (id, map, before, currentDataLayers) => {
   for (let l of currentDataLayers) map.removeLayer(l);
-  const heatId = loadHeatLayer(map, before, `heat-${id}`, `points-${id}`);
-  const circlesId = loadCircleLayer(
-    map,
-    `heat-${id}`,
-    `points-${id}`,
-    `points-${id}`
-  );
+  const heatId = loadHeatLayer(map, {
+    before,
+    id: `heat-${id}`,
+    source: `points-${id}`
+  });
+  const circlesId = loadCircleLayer(map, {
+    before: `heat-${id}`,
+    source: `points-${id}`,
+    id: `points-${id}`
+  });
   return [heatId, circlesId];
 };
 
