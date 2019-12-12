@@ -103,7 +103,7 @@ export const createLayersKeeper = (map, keepLayers = []) => (
       console.log(keepLayers);
       const boforeIndex = nextLayerIds.indexOf(before[l.id]);
       map.addLayer(l, boforeIndex !== -1 ? before[l.id] : undefined);
-      layers.splice(boforeIndex, 0);
+      // layers.splice(boforeIndex, 0);
     });
     onStyleChanged(map.getStyle());
   });
