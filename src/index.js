@@ -79,7 +79,7 @@ setTimeout(function() {
   bindZoomEvents(map);
   switchInteractions = createInteractionsSwitcher(map);
   map.once("styledata", function() {
-    // labelsLayerId = getLabelsLayer(map.getStyle());
+    labelsLayerId = getLabelsLayer(map.getStyle());
     removeLabels(map);
     loadGTPointsSource(map);
     loadOSMPointsSource(map);
@@ -125,10 +125,9 @@ setTimeout(function() {
   setStyle = createLayersKeeper(map, keepLayers);
 }, 101);
 
-// function onStyleChanged(style) {
-//   labelsLayerId = getLabelsLayer(style);
-//   console.log("labelsLayerId", labelsLayerId);
-// }
+function onStyleChanged(style) {
+  labelsLayerId = getLabelsLayer(style);
+}
 
 const baseMapTogglers = document.getElementsByClassName("basemap-toggle");
 let prevStyleId = "dark";
@@ -137,8 +136,8 @@ function toggleBaseMap({ passedId }) {
   if (id === prevStyleId) return;
   prevStyleId = id;
   for (let t of baseMapTogglers) t.classList.toggle("is-focused");
-  // labelsLayerId = getLabelsLayer(map.getStyle());
-  setStyle(STYLES[id]);
+  labelsLayerId = getLabelsLayer(map.getStyle());
+  setStyle(STYLES[id], onStyleChanged);
 }
 const throttleToggleBaseMap = throttle(
   toggleBaseMap,
