@@ -31,7 +31,6 @@ const navbar = document.getElementById("navbar");
 const header = document.getElementById("header");
 const controls = document.getElementById("footer-controls");
 const zommControls = document.getElementById("zoom-controls");
-const goDownCaret = document.getElementById("go-down-caret");
 const showNavbar = () => (navbar.style.animationName = "appearsFromTop");
 const showHeader = () => (header.style.animationName = "appearsFromTop");
 const hideHeader = () => (header.style.animationName = "vanishToTop");
@@ -40,13 +39,14 @@ const hideInfo = () => (info.style.animationName = "vanishToBottom");
 const showControls = () => (controls.style.animationName = "appearsFromBottom");
 const showZoomControls = () =>
   (zommControls.style.animationName = "appearsFromLeft");
-const hideGoDownCaret = () =>
-  goDownCaret.style.setProperty("animation-name", "unset");
+// const goDownCaret = document.getElementById("go-down-caret");
+// const hideGoDownCaret = () =>
+//   goDownCaret.style.setProperty("animation-name", "unset");
 // const hideZoomControls = () => (controls.style.animationName = "vanishToLeft");
 // const hideControls = () => (info.style.animationName = "vanishToBottom");
 
-// setBodyHeight();
-// window.addEventListener("resize", setBodyHeight);
+setBodyHeight();
+window.addEventListener("resize", setBodyHeight);
 
 // showControls();
 showInfo();
@@ -96,7 +96,6 @@ function startExploring() {
   hideInfo();
   showControls();
   showZoomControls();
-  hideGoDownCaret();
 
   map.flyTo({
     duration: START_EXPLORING_FLY_TIME,

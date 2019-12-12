@@ -35,14 +35,21 @@
     />
 
     <!-- <link rel="stylesheet" href="src/styles/debug.css" /> -->
-    <style></style>
+    <style>
+      body {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        overflow: hidden;
+        background: black;
+      }
+    </style>
   </head>
   <body>
     <div id="map"></div>
     <div id="bg-loader"></div>
-    <div id="go-down-caret" class="animated from-top">
-      <i class="fas fa-5x fa-angle-down"></i>
-    </div>
     <nav id="navbar" class="hero-head animated from-top">
       <div class="columns is-mobile is-marginless heading has-text-weight-bold">
         <div class="column left">
