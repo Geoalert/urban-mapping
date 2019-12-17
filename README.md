@@ -6,13 +6,13 @@ Now it's possible to digitize all buildings in the World using Computer vision a
 
 ## Ongoing progress
 
-In the demo map we transformed polygons into points (centroids) and compared them with Openstreetmap "state of the map" using vector tiles to visulalize both layers: [https://geoalert.github.io/urban-mapping/](https://geoalert.github.io/urban-mapping/)
+In the demo map we transformed polygons into points (centroids) and compared them with Openstreetmap "state of the map".  Vector tiles technique is used to visulalize both of layers: [https://geoalert.github.io/urban-mapping/](https://geoalert.github.io/urban-mapping/)
 
-![](https://miro.medium.com/max/841/1*oxfp6u5iJXOFR26pB3lrow.gif)
+<a href="https://geoalert.github.io/urban-mapping">![](https://miro.medium.com/max/841/1*oxfp6u5iJXOFR26pB3lrow.gif)</a>
 
-Our first target domain is Russian territory. We are going to update information on the dataset coverage and to provide some metrics on the comparison with OSM. At the moment we reached the number of 54+MLN buildings.
+Our first target domain is Russian territory. We are going to update information on the dataset coverage and to provide some metrics on the comparison with OSM. At the moment we reached the number of 54+MLN automaticaly extracted features that has to be specified using validation methods.
 
-Please refer to the grid IDs at the scheme below to download the appropriate datasets.
+Please refer to the regions IDs at the scheme below to download the appropriate datasets.
 
 ![Russia grid](https://i.ibb.co/T23CFWK/photo-2019-12-10-13-34-15.png)
 
