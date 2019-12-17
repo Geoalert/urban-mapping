@@ -8,20 +8,28 @@ Now it's possible to digitize all buildings in the World using Computer vision a
 
 In the demo map we transformed polygons into points (centroids) and compared them with Openstreetmap "state of the map".  Vector tiles technique is used to visulalize both of layers: [https://geoalert.github.io/urban-mapping/](https://geoalert.github.io/urban-mapping/)
 
+[Read more in our blog](https://medium.com/geoalert-platform-urban-monitoring/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4)
+
 <a href="https://geoalert.github.io/urban-mapping">![](https://miro.medium.com/max/841/1*oxfp6u5iJXOFR26pB3lrow.gif)</a>
+
+## Buildings statistics
 
 Our first target domain is Russian territory. We are going to update information on the dataset coverage and to provide some metrics on the comparison with OSM. At the moment we reached the number of 54+MLN automaticaly extracted features that has to be specified using validation methods.
 
-Please refer to the regions IDs at the scheme below to download the appropriate datasets.
+Please refer to the regions statistics at the scheme below, categorized by buildings count ratio to Openstreetmap, to download the appropriate datasets.
 
-![Russia grid](https://i.ibb.co/T23CFWK/photo-2019-12-10-13-34-15.png)
+![Buildings count ratio - Russia regions](https://i.ibb.co/f4g7STt/regions-Ru.png)
+[**Download Buidings count statistics by regions, GeoJSON**](https://filebrowser.aeronetlab.space/s/INc6jlnQ8UTV6q6)
+
+
+## Sample datasets
 
 |GRID ID|Open datasets|Building heights|Geometry|Feature count|Format|Size (zipped)|
 |-------------|------------|----------|----------|-----------|------------|------------|
-|274|[Kaliningrad region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/kaliningrad_region_274.zip)| No | | 208,154| GeoPackage, GeoJSON | 40Mb |
-|286|[Smolensk region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/smolensk_region_286.zip)| No | | 378,930| GeoPackage, GeoJSON | 80Mb |
+|274|[Kaliningrad region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/kaliningrad_region_274.zip)| No | Polygons | 208,154| GeoPackage, GeoJSON | 40Mb |
+|286|[Smolensk region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/smolensk_region_286.zip)| No | Polygons | 378,930| GeoPackage, GeoJSON | 80Mb |
 
-## Emergency Mapping contribution
+## Mapping contribution
 The data is used for Emergency Mapping response like in [Irkutsk region, Russia, that was heavily flooded in summer 2019](https://geoalert.github.io/Irkutsk-flood/) - so we will appreciate any related contribution and data requests.
 
 Please check for the [issues](https://github.com/Geoalert/urban-mapping/issues) or contact us directly by [hello@geoalert.io](mailto:hello@geoalert.io)
