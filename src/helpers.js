@@ -98,10 +98,8 @@ export const createLayersKeeper = (map, keepLayers = []) => {
       const nextLayerIds = layers.map(({ id }) => id);
       Object.keys(dataSources).forEach(s => map.addSource(s, dataSources[s]));
       dataLayers.forEach(l => {
-        console.log(before, l);
         const boforeIndex = nextLayerIds.indexOf(before[l.id]);
         map.addLayer(l, boforeIndex !== -1 ? before[l.id] : undefined);
-        // layers.splice(boforeIndex, 0);
       });
       onStyleChanged(map.getStyle());
     });
