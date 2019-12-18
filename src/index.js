@@ -40,7 +40,8 @@ const showControls = () => (controls.style.animationName = "appearsFromBottom");
 const showZoomControls = () =>
   (zommControls.style.animationName = "appearsFromLeft");
 
-const repairMapSize = () => mapNode.style.setProperty("height", "100vh");
+const repairMapSize = () =>
+  mapNode.style.setProperty("height", "calc(var(--vh, 1vh) * 100)");
 
 setBodyHeight();
 window.addEventListener("resize", setBodyHeight);

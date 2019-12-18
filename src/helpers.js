@@ -65,47 +65,6 @@ export const getCircleColor = colorSteps => [
   ...colorSteps
 ];
 
-export const createLayersKeeper = (map, keepLayers = []) => {
-  let layerIds = [],
-    sourceIds = [],
-    before = {};
-  for (let l of keepLayers) {
-    layerIds.push(l.id);
-    sourceIds.push(l.source || l.id);
-    if (l.before) before[l.id] = l.before;
-  }
-  const filterLayers = ({ id }) => layerIds.some(l => id.startsWith(l));
-  const filterSources = id => sourceIds.some(s => id.startsWith(s));
-  // const filterLayers = l => layerIds.indexOf(l.id) !== -1;
-  // const filterSources = id => sourceIds.indexOf(id) !== -1;
-  return (nextStyle, onStyleChanged = () => {}) => {
-    const currentStyle = map.getStyle();
-    const dataLayers = currentStyle.layers.filter(filterLayers);
-    const dataSources = Object.keys(currentStyle.sources)
-      .filter(filterSources)
-      .reduce(
-        (acc, s) => ({
-          ...acc,
-          [s]: currentStyle.sources[s]
-        }),
-        {}
-      );
-    map.setStyle(nextStyle);
-
-    map.once("styledata", () => {
-      const style = map.getStyle();
-      const layers = style.layers;
-      const nextLayerIds = layers.map(({ id }) => id);
-      Object.keys(dataSources).forEach(s => map.addSource(s, dataSources[s]));
-      dataLayers.forEach(l => {
-        const boforeIndex = nextLayerIds.indexOf(before[l.id]);
-        map.addLayer(l, boforeIndex !== -1 ? before[l.id] : undefined);
-      });
-      onStyleChanged(map.getStyle());
-    });
-  };
-};
-
 export const switchDataLayers = (id, map, before, currentDataLayers) => {
   for (let l of currentDataLayers) map.removeLayer(l);
   const heatId = loadHeatLayer(map, {
@@ -133,3 +92,46 @@ export function bindZoomEvents(map) {
     setZoom(-ZOOM_STEP);
   });
 }
+
+export const createLayersKeeper = (map, keepLayers = []) => {
+  let layerIds = [],
+    sourceIds = [],
+    before = {};
+  for (let l of keepLayers) {
+    layerIds.push(l.id);
+    sourceIds.push(l.source || l.id);
+    if (l.before) before[l.id] = l.before;
+  }
+  const filterLayers = ({ id }) => layerIds.some(l => id.startsWith(l));
+  const filterSources = id => sourceIds.some(s => id.startsWith(s));
+
+  return (nextStyle, onStyleChanged = () => {}) => {
+    const currentStyle = map.getStyle();
+    const reduceLayers = (acc, l) => ({ ...acc, [l.id]: l });
+    const reduceSources = (acc, s) => ({
+      ...acc,
+      [s]: currentStyle.sources[s]
+    });
+    const dataLayers = currentStyle.layers
+      .filter(filterLayers)
+      .reduce(reduceLayers, {});
+    const dataSources = Object.keys(currentStyle.sources)
+      .filter(filterSources)
+      .reduce(reduceSources, {});
+    map.setStyle(nextStyle);
+
+    map.once("styledata", () => {
+      Object.keys(dataSources).forEach(s => map.addSource(s, dataSources[s]));
+      const nextLayerIds = map.getStyle().layers.map(({ id }) => id);
+      const filterCurrentLayers = id =>
+        Object.keys(dataLayers).indexOf(id) !== -1;
+      layerIds.filter(filterCurrentLayers).forEach(id => {
+        const layer = dataLayers[id];
+        const beforeIndex = nextLayerIds.indexOf(before[id]);
+        map.addLayer(layer, beforeIndex !== -1 ? before[id] : undefined);
+        nextLayerIds.push(id);
+      });
+      onStyleChanged(map.getStyle());
+    });
+  };
+};
