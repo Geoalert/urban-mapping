@@ -24,7 +24,7 @@ body {
 
 #map {
   position: absolute;
-  height: calc(100vh + #{$map-top-offset}) !important;
+  height: calc(100vh + #{$map-top-offset});
   width: 100%;
   top: 0;
   left: 0;
@@ -126,17 +126,18 @@ a.navbar-item:hover {
   max-width: 2rem;
 }
 
-#go-down-caret {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  animation-iteration-count: infinite;
-  animation-delay: 2.5s;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  @media (max-width: 512px) {
-    animation-name: appearsFromTopAndVanishDelayIterations;
+@media (max-width: 768px) {
+  .mapboxgl-ctrl {
+    margin: 0px !important;
+    transform: scale(0.5);
+  }
+  .mapboxgl-ctrl-bottom-left {
+    transform: translate(-25%, 25%);
+  }
+  .mapboxgl-ctrl-bottom-right {
+    transform: translate(25%, 25%);
+  }
+  #footer-controls {
+    padding-bottom: 1rem !important;
   }
 }

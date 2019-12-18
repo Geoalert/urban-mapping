@@ -39,11 +39,8 @@ const hideInfo = () => (info.style.animationName = "vanishToBottom");
 const showControls = () => (controls.style.animationName = "appearsFromBottom");
 const showZoomControls = () =>
   (zommControls.style.animationName = "appearsFromLeft");
-// const goDownCaret = document.getElementById("go-down-caret");
-// const hideGoDownCaret = () =>
-//   goDownCaret.style.setProperty("animation-name", "unset");
-// const hideZoomControls = () => (controls.style.animationName = "vanishToLeft");
-// const hideControls = () => (info.style.animationName = "vanishToBottom");
+
+const repairMapSize = () => mapNode.style.setProperty("height", "100vh");
 
 setBodyHeight();
 window.addEventListener("resize", setBodyHeight);
@@ -72,9 +69,7 @@ setTimeout(function() {
     style: "mapbox://styles/mapbox/dark-v10",
     zoom: 2.71,
     center: [83.66, 58.56],
-    minZoom: 2.71,
-    // hash: true,
-    attributionControl: false
+    minZoom: 2.71
   });
   bindZoomEvents(map);
   switchInteractions = createInteractionsSwitcher(map);
@@ -100,6 +95,7 @@ function startExploring() {
   hideInfo();
   showControls();
   showZoomControls();
+  repairMapSize();
 
   map.flyTo({
     duration: START_EXPLORING_FLY_TIME,
