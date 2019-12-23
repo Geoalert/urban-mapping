@@ -85,10 +85,12 @@ a.navbar-item:hover {
 }
 
 .button {
-  box-shadow: 0 0 0 0.05rem white,
-    // adds small blur to the border edges
-      0 0 1px 0.07rem white,
-    inset 0 0 1px 1px white;
+  box-shadow: 0 0 0 0.1rem white;
+
+  // box-shadow: 0 0 0 0.05rem white,
+  //   // adds small blur to the border edges
+  //     0 0 1px 0.07rem white,
+  //   inset 0 0 1px 1px white;
 }
 
 #footer-info {
