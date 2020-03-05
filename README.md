@@ -6,20 +6,19 @@ Now it's possible to digitize all buildings in the World using Computer vision a
 
 ## Ongoing progress
 
-In the demo map we transformed polygons into points (centroids) and compared them with Openstreetmap "state of the map".  Vector tiles technique is used to visulalize both of layers: [https://geoalert.github.io/urban-mapping/](https://geoalert.github.io/urban-mapping/)
+In the demo map we transformed polygons into points (centroids) and compared them with Openstreetmap (relevant for Dec 2019). Vector tiles technique is used to visulalize both of layers.
 
-[Read more in our blog](https://medium.com/geoalert-platform-urban-monitoring/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4)
+[View map](https://geoalert.github.io/urban-mapping/) or [Read more on our blog](https://medium.com/geoalert-platform-urban-monitoring/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4)
 
-<a href="https://geoalert.github.io/urban-mapping">![](https://miro.medium.com/max/841/1*oxfp6u5iJXOFR26pB3lrow.gif)</a>
 
 ## Buildings statistics
 
 Our first target domain is Russian territory. We are going to update information on the dataset coverage and to provide some metrics on the comparison with OSM. At the moment we reached the number of 54+MLN automaticaly extracted features that has to be specified using validation methods.
 
-Please refer to the regions statistics at the scheme below, categorized by buildings count ratio to Openstreetmap, to download the appropriate datasets.
+Please refer to the regions statistics at the scheme below, categorized by Geoalert/Openstreetmap buildings count ratio.
 
-![Buildings count ratio - Russia regions](https://i.ibb.co/f4g7STt/regions-Ru.png)
-[**Download Buidings count statistics by regions, GeoJSON**](https://filebrowser.aeronetlab.space/s/INc6jlnQ8UTV6q6)
+![Buildings count ratio - Russia regions](https://geoalert.io/img/urban/region_statistics_by_geoalert.png)
+[**Download statistics, GeoJSON**](https://filebrowser.aeronetlab.space/s/INc6jlnQ8UTV6q6)
 
 
 ## Sample datasets
