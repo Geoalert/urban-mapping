@@ -36,7 +36,7 @@ We also use our data for Emergency Mapping as in [Irkutsk region, Russia, that w
 Please check for the [issues](https://github.com/Geoalert/urban-mapping/issues) or contact us directly at [hello@geoalert.io](mailto:hello@geoalert.io)
 
 ## Classification
-Here is the generalized classification of buildings. We are working to include more classes and improve the accuracy.
+Here is the generalized classification of buildings. We are looking to include more classes and improve the accuracy.
 
 <table>
   <tr>
