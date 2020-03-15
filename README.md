@@ -109,7 +109,7 @@ Here is the generalized classification of buildings. We are looking to include m
    </td>
    <td>Garages, transformer boxes, small hangars, etc.
    </td>
-   <td><img src="https://aeronetlab.space/img/class_img/105.png" />
+   <td><img src="https://aeronetlab.space/img/class_img/105.jpg" />
    </td>
   </tr>
  </table>
