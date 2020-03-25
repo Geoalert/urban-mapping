@@ -8,7 +8,8 @@ Buildings are commonly put on a map by digitizing their shapes from satellite im
 
 In the map below, we've transformed both Geoalert and OSM polygons into points by taking their centroids and compared the results (as of Dec 2019). [Vector tiles](https://en.wikipedia.org/wiki/Vector_tiles) are used to visulalize both layers.
 
-[View map](https://geoalert.github.io/urban-mapping/) or [Read more in our blog](https://medium.com/geoalert-platform-urban-monitoring/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4)
+### [View map](https://geoalert.github.io/urban-mapping/) 
+or [Read more in our blog](https://medium.com/geoalert-platform-urban-monitoring/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4)
 
 
 ## Buildings Statistics
