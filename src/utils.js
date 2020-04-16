@@ -1,6 +1,6 @@
 export const throttle = (fn, wait) => {
   let inThrottle, lastFn, lastTime;
-  return function() {
+  return function () {
     const context = this,
       args = arguments;
     if (!inThrottle) {
@@ -9,7 +9,7 @@ export const throttle = (fn, wait) => {
       inThrottle = true;
     } else {
       clearTimeout(lastFn);
-      lastFn = setTimeout(function() {
+      lastFn = setTimeout(function () {
         if (Date.now() - lastTime >= wait) {
           fn.apply(context, args);
           lastTime = Date.now();
@@ -20,7 +20,7 @@ export const throttle = (fn, wait) => {
 };
 
 export const zip = (...arrays) => {
-  const maxLength = Math.max(...arrays.map(x => x.length));
+  const maxLength = Math.max(...arrays.map((x) => x.length));
   return Array.from({ length: maxLength }).map((_, i) => {
     return Array.from({ length: arrays.length }, (_, k) => arrays[k][i]);
   });

@@ -10,7 +10,7 @@ import {
   createLayersKeeper,
   switchDataLayers,
   setBodyHeight,
-  bindZoomEvents
+  bindZoomEvents,
 } from "./helpers";
 import { loadHeatLayer, loadCircleLayer } from "./layers";
 import { loadGTPointsSource, loadOSMPointsSource } from "./sources";
@@ -21,7 +21,7 @@ import {
   START_EXPLORING_FLY_TIME,
   START_EXPLORING_TARGET_ZOOM,
   START_EXPLORING_TARGET_CENTER,
-  THROTTLE_SWITCH_ACTIONS_DELAY
+  THROTTLE_SWITCH_ACTIONS_DELAY,
 } from "./constants";
 import { throttle } from "./utils";
 
@@ -63,18 +63,18 @@ let map,
   currentDataLayers = [];
 
 const accessToken = isDevelopment ? Tokens.development : Tokens.production;
-setTimeout(function() {
+setTimeout(function () {
   map = new mapboxgl.Map({
     accessToken,
     container: mapNode,
     style: "mapbox://styles/mapbox/dark-v10",
     zoom: 2.71,
     center: [83.66, 58.56],
-    minZoom: 2.71
+    minZoom: 2.71,
   });
   bindZoomEvents(map);
   switchInteractions = createInteractionsSwitcher(map);
-  map.once("styledata", function() {
+  map.once("styledata", function () {
     labelsLayerId = getLabelsLayer(map.getStyle());
     removeLabels(map);
     loadGTPointsSource(map);
@@ -83,11 +83,35 @@ setTimeout(function() {
     const circlesId = loadCircleLayer(map, {
       before: "heat-gt",
       source: "points-gt",
-      id: "points-gt"
+      id: "points-gt",
     });
     currentDataLayers = currentDataLayers.concat([heatId, circlesId]);
     switchInteractions(false);
     map.getCanvas().style.cursor = "default";
+
+    map.on("mouseenter", "points-osm", function () {
+      map.getCanvas().style.cursor = "pointer";
+    });
+    // Change it back to a pointer when it leaves.
+    map.on("mouseleave", "points-osm", function () {
+      map.getCanvas().style.cursor = "";
+    });
+    map.on("click", "points-osm", function (e) {
+      var coordinates = e.features[0].geometry.coordinates.slice();
+      var population = e.features[0].properties.population_gkh;
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      new mapboxgl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(`Population: ${population}`)
+        .addTo(map);
+    });
   });
 }, 100);
 
@@ -101,12 +125,12 @@ function startExploring() {
   map.flyTo({
     duration: START_EXPLORING_FLY_TIME,
     zoom: START_EXPLORING_TARGET_ZOOM,
-    center: START_EXPLORING_TARGET_CENTER
+    center: START_EXPLORING_TARGET_CENTER,
   });
   setTimeout(() => {
     toggleBaseMap({ passedId: "satellite" });
   }, 2500);
-  setTimeout(function() {
+  setTimeout(function () {
     switchInteractions(true);
     map.getCanvas().style.cursor = "";
   }, 1500);
@@ -116,9 +140,9 @@ let keepLayers = [
   { id: "heat-gt", before: labelsLayerId },
   { id: "points-gt", before: "heat-gt" },
   { id: "heat-osm", before: labelsLayerId },
-  { id: "points-osm", before: "heat-osm" }
+  { id: "points-osm", before: "heat-osm" },
 ];
-setTimeout(function() {
+setTimeout(function () {
   setStyle = createLayersKeeper(map, keepLayers);
 }, 101);
 

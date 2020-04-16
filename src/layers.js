@@ -4,7 +4,8 @@ import {
   heatmapIntensity,
   heatmapRadius,
   heatmapOpacity,
-  getHeatColors
+  getHeatColors,
+  getCircleColors,
 } from "./constants";
 import { circleOpacity, circlesLayout, circleRadius } from "./constants";
 
@@ -29,7 +30,7 @@ export function loadHeatLayer(
           0,
           0,
           500,
-          1
+          1,
         ],
         // Increase the heatmap color weight weight by zoom level
         // heatmap-intensity is a multiplier on top of heatmap-weight
@@ -41,8 +42,8 @@ export function loadHeatLayer(
         // Adjust the heatmap radius by zoom level
         "heatmap-radius": heatmapRadius,
         // Transition from heatmap to circle layer by zoom level
-        "heatmap-opacity": 0
-      }
+        "heatmap-opacity": 0,
+      },
     },
     before
   );
@@ -68,12 +69,20 @@ export function loadCircleLayer(
       layout: circlesLayout,
       paint: {
         "circle-radius": circleRadius,
-        "circle-color": "yellow", //palette[0],
-        "circle-stroke-width": 1,
+        "circle-color": getCircleColors(palette), //palette[0],
+        "circle-stroke-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9,
+          0.1,
+          12,
+          1,
+        ],
         "circle-stroke-color": palette[0],
-        "circle-opacity": 0,
-        "circle-stroke-opacity": 0
-      }
+        // "circle-stroke-opacity": 0,
+        // "circle-opacity": 0,
+      },
     },
     before
   );

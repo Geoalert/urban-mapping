@@ -16,7 +16,7 @@
     "babel-plugin-object-to-json-parse": "0.0.8",
     "bulma": "^0.8.0",
     "gh-pages": "^2.1.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "4.13.1",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-clean-dist": "0.0.6",
     "sass": "^1.23.7"
