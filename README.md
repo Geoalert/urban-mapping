@@ -2,7 +2,7 @@
 
 Introduction
 ------------
-Buildings are commonly put on a map by digitizing their shapes in satellite imagery. If done manually, this can be a time-consuming and expensive task. This project attempts to automate this process by delegating the digitizing routine to _neural networks_. It is now possible to digitize every building in the world using _computer vision_ and _satellite imagery_. Our technology is powered by _open stack_ and we strive to contribute our results back to the community by filling the data gaps in [OpenStreetMap (OSM)](https://www.openstreetmap.org).    
+Buildings are commonly put on a map by digitizing their shapes in satellite imagery. If done manually, this can be a time-consuming and expensive task. This project attempts to automate this process by delegating the digitizing routine to **neural networks**. It is now possible to digitize every building in the world using **computer vision and satellite imagery**. We strive to contribute some of our results to the community by filling the data gaps in [OpenStreetMap (OSM)](https://www.openstreetmap.org) buildings coverage.      
 
 ## The ongoing progress of Urban Mapping
 
@@ -18,7 +18,7 @@ To learn more about the project [read our blog](https://medium.com/geoalert-plat
 
 ## Buildings Statistics - Russia
 
-Based in Russia, we've picked its territory as our testing ground. By now, we've automaticaly extracted _54+ mln building features_ using different satellite imagery sources. We compared our statistics with OSM in terms of buildings count ratio. The statistics are displayed by [region](https://en.wikipedia.org/wiki/Federal_subjects_of_Russia).
+Based in Russia, we've picked its territory as our testing ground. By now, we've automaticaly extracted **54+ mln building features** using different satellite imagery sources. We compared our statistics with OSM by buildings count. The statistics are displayed by [region](https://en.wikipedia.org/wiki/Federal_subjects_of_Russia).
 
 ![**Building count ratio Geoalert/OSM - Russia, by region**](src/images/comparison_OSM-Geoalert.png)
 
