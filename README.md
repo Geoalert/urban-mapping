@@ -1,47 +1,54 @@
-# Open Urban Mapping project
+# The Open Urban Mapping project
 
 Introduction
--------------
-Now it's possible to digitize all buildings in the World using Computer vision and Satellite imagery. This project is started to help accelerate the routine work of digitizing of the buildings and to fill the data gaps in Openstreetmap's open data.  
+------------
+Buildings are commonly put on a map by digitizing their shapes in satellite imagery. If done manually, this can be a time-consuming and expensive task. This project attempts to automate this process by delegating the digitizing routine to **neural networks**. It is now possible to digitize every building in the world using **computer vision and satellite imagery**. We strive to contribute some of our results to the community by filling the data gaps in [OpenStreetMap (OSM)](https://www.openstreetmap.org) buildings coverage.      
 
-## Ongoing progress
+## The ongoing progress of Urban Mapping
 
-In the demo map we transformed polygons into points (centroids) and compared them with Openstreetmap "state of the map".  Vector tiles technique is used to visulalize both of layers: [https://geoalert.github.io/urban-mapping/](https://geoalert.github.io/urban-mapping/)
+In the map below, we've transformed both Geoalert and OSM polygons into points by taking their centroids and compared the results (as of Dec 2019, Russia). [Vector tiles](https://en.wikipedia.org/wiki/Vector_tiles) are used to visulalize both layers.
 
-[Read more in our blog](https://medium.com/geoalert-platform-urban-monitoring/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4)
-
-<a href="https://geoalert.github.io/urban-mapping">![](https://miro.medium.com/max/841/1*oxfp6u5iJXOFR26pB3lrow.gif)</a>
-
-## Buildings statistics
-
-Our first target domain is Russian territory. We are going to update information on the dataset coverage and to provide some metrics on the comparison with OSM. At the moment we reached the number of 54+MLN automaticaly extracted features that has to be specified using validation methods.
-
-Please refer to the regions statistics at the scheme below, categorized by buildings count ratio to Openstreetmap, to download the appropriate datasets.
-
-![Buildings count ratio - Russia regions](https://i.ibb.co/f4g7STt/regions-Ru.png)
-[**Download Buidings count statistics by regions, GeoJSON**](https://filebrowser.aeronetlab.space/s/INc6jlnQ8UTV6q6)
+### [View map](https://geoalert.github.io/urban-mapping/) 
 
 
-## Sample datasets
+To continue the research and implementation of Urban Mapping premium tehnology we did a few pilot projects with commercial companies. (E.g. [the description and the dataset](https://github.com/Geoalert/vidnoe_benchmark) created with Russian Post)
 
-|GRID ID|Open datasets|Building heights|Geometry|Feature count|Format|Size (zipped)|
-|-------------|------------|----------|----------|-----------|------------|------------|
-|274|[Kaliningrad region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/kaliningrad_region_274.zip)| No | Polygons | 208,154| GeoPackage, GeoJSON | 40Mb |
-|286|[Smolensk region, Russia](https://minio.aeronetlab.space/public/datasets/urban_mapping/smolensk_region_286.zip)| No | Polygons | 378,930| GeoPackage, GeoJSON | 80Mb |
+To learn more about the project [read our blog](https://medium.com/geoalert-platform-urban-monitoring/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4)
+
+
+## Buildings Statistics - Russia
+
+Based in Russia, we've picked its territory as our testing ground. By now, we've automaticaly extracted **54+ mln building features** using different satellite imagery sources. We compared our statistics with OSM by buildings count. The statistics are displayed by [region](https://en.wikipedia.org/wiki/Federal_subjects_of_Russia).
+
+![**Building count ratio Geoalert/OSM - Russia, by region**](src/images/comparison_OSM-Geoalert.png)
+
+[**Click here to download the source dataset in GeoJSON**](https://filebrowser.aeronetlab.space/s/INc6jlnQ8UTV6q6)
+
+
+## Open datasets - Russia
+
+Open datasets were created based on the processing of ["Mapbox satellite"](https://www.mapbox.com/maps/satellite) global base map for futher contribution into Openstreetmap project (under "ODbL" License).
+Mapbox satellite has comparatively poor quality for Russian territory, therefore the datasets have to be validated quite carefully. The data is updated by regions of higher buildings count ratio comparing to OSM.
+
+|Country|Region|Building heights| Building types|Feature count| Count ratio, OSM, dec 2019 | Format|Size (unzipped)|
+|-------------|------------|----------|----------|-----------|------------|------------|-------------|
+|Rus|[**Bashkortostan**](https://filebrowser.aeronetlab.space/s/CSQGJbrZFsaHJOY)| - | ✓ | 998,215| 4 | GeoPackage | 210Mb |
 
 ## Mapping contribution
-The data is used for Emergency Mapping response like in [Irkutsk region, Russia, that was heavily flooded in summer 2019](https://geoalert.github.io/Irkutsk-flood/) - so we will appreciate any related contribution and data requests.
+If you are OSM volunteer you can use this data to contribute to OSM. It's recommended to avoid imports before you check and validate automatically generated buildings.
 
-Please check for the [issues](https://github.com/Geoalert/urban-mapping/issues) or contact us directly by [hello@geoalert.io](mailto:hello@geoalert.io)
+The auto-mapping approach also can used to help create maps in case of emergencies as in [Irkutsk region, Russia, that was heavily flooded in the summer 2019](https://geoalert.github.io/Irkutsk-flood/) - so we appreciate any related contribution and/or data requests.
+
+If you have time to help with documentation, integration of datasets into third-party applications like JOSM, Rapid, etc. to help promoting this project, please check for the [issues](https://github.com/Geoalert/urban-mapping/issues) or create one. Contact us directly at [hello@geoalert.io](mailto:hello@geoalert.io)
 
 ## Classification
-Here is the generalized classification of buildings by most confident types we propose in the datasets. This can be extended to more classes.
+Here is the generalized classification of buildings. We are looking to include more classes and improve the accuracy.
 
 <table>
   <tr>
    <td><strong>ID</strong>
    </td>
-   <td><strong>CLass name</strong>
+   <td><strong>Class name</strong>
    </td>
    <td><strong>Description</strong>
    </td>
@@ -54,9 +61,9 @@ Here is the generalized classification of buildings by most confident types we p
 101</p>
 
    </td>
-   <td>Residential building
+   <td>Residential buildings
    </td>
-   <td>Roofs (not "footprints") of apartment multistorey buildings (shoud have at least 3+ storeys). Low floor apartment blocks in high density residential areas. 
+   <td>Roof outline (roof projection to the footprint) of the residential multi-storey buildings of different construction types
    </td>
    <td><img src="https://aeronetlab.space/img/class_img/101.png"/>
    </td>
@@ -67,10 +74,10 @@ Here is the generalized classification of buildings by most confident types we p
 102</p>
 
    </td>
-   <td>House
+   <td>Houses
    </td>
    <td>
-    Private houses. Usualy corresponds to the single household.
+    Private houses (usually representing a single household)
    </td>
    <td><img src="https://aeronetlab.space/img/class_img/102.png" />
    </td>
@@ -81,9 +88,9 @@ Here is the generalized classification of buildings by most confident types we p
 103</p>
 
    </td>
-   <td>Industrial building
+   <td>Industrial buildings
    </td>
-   <td>Plants, etc.
+   <td>Plants, large hangars, warehouses, etc.
    </td>
    <td><img src="https://aeronetlab.space/img/class_img/103.png" />
    </td>
@@ -95,11 +102,11 @@ Here is the generalized classification of buildings by most confident types we p
 104</p>
 
    </td>
-   <td>Commercial building
+   <td>Commercial buildings
    </td>
-   <td>Office buildings, Retail, supermarkets  etc.
+   <td>Offices, retail, etc.
    </td>
-   <td>
+   <td><img src="https://aeronetlab.space/img/class_img/104.png" />
    </td>
   </tr>
 
@@ -110,52 +117,29 @@ Here is the generalized classification of buildings by most confident types we p
    </td>
    <td>Other non-residential buildings
    </td>
-   <td>Garages, hangars, etc. - mostly small non-residential buildings
+   <td>Garages, transformer boxes, small hangars, etc.
    </td>
-   <td>
+   <td><img src="https://aeronetlab.space/img/class_img/105.jpg" />
    </td>
   </tr>
  </table>
 
 ## License
-This data is licensed under the [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/) which is compatible with OSM.
-The input data is copyrighted by data providers but is not distributed along with the dataset. In Mapbox Terms of Service it's stated clear that 
+The "Open Urban Mapping" project data is licensed under the [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/) which is compatible with OSM.
+The input data is copyrighted by the data providers but is not distributed along with the dataset. The Mapbox Terms of Service state that 
 ```You may use Studio or third-party software to trace Mapbox maps solely comprised of satellite imagery ("Mapbox Satellite Imagery") and produce derivative vector datasets for non-commercial purposes and for OpenStreetMap. (https://www.mapbox.com/legal/tos/#[YmuSEapb)```
 
 ## Technical details
 * Coordinate reference system - EPSG: 4326
-* Data format - GeoPackage or GeoJSON files
+* Data format - GeoPackage or GeoJSON
 
-### Querying features through http API service
-It is possible to query processed "Urban Mapping" data over http via the endpoint: `http://demo.geoalert.io/russia-buildings/geojson?`.  
-! **Authorization** via `Basic Auth` is required.  
-The output is geojson file in `EPSG:4326`.  
-The service fetches geojson features, producing a chunked stream as an http response. It should be safe to fetch reasonably large chunks of data.
-
-The **target area** is specified by request params:  
-`bbox` in the format `[xmin, ymin, xmax, ymax]`  
-or  
-`polygon` in the geojson format
-
-**additional params**
-
-`srid` specifies the coordinate system reference by EPSG ID of the bbox/polygon (default is `4326`, optional is `3857`)
-
-`points` [boolean] specifies if to get points geometry (buildings centroids) instead of polygons. Default is `false` 
-#
-E.g. queries:   
-*GET `https://demo.geoalert.io/russia-buildings/geojson?bbox=[4152175.426194705, 7475188.589286174, 4162876.6101546297, 7488526.850721938]&srid=3857`
-
-*GET `https://demo.geoalert.io/russia-buildings/geojson?polygon={"type":"Polygon","coordinates":[[[37.29962647696191,55.64732925994261],[37.29962647696191,55.579658422801145],[37.39575684805566,55.579658422801145],[37.39575684805566,55.64732925994261],[37.29962647696191,55.64732925994261]]]}&points=true`  
-
-*POST requests are also supported (with the same endpoint url). Bbox or polygon must be supplied in the request body. Other request parameters work as with GET requests. This option may be useful for querying features by a complex polygon, which doesn't fit into URL character limit.
 
 ## References
-* [Subscribe to our blog](https://medium.com/geoalert-platform-urban-monitoring/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4)
+* [Subscribe to Geoalert blog](https://medium.com/geoalert-platform-urban-monitoring/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4)
 * [Microsoft buildings footprints](https://github.com/microsoft/USBuildingFootprints)
-* [RapID - Facebook editor for Openstreetmap](https://github.com/facebookincubator/RapiD)
-* [Comparison of MS buildings footprints and Openstreetmap by Azavea](https://demos.azavea.com/building-footprint-comparison/)
+* [RapID - Facebook editor for OpenStreetMap](https://github.com/facebookincubator/RapiD)
+* [Comparison of MS building footprints and OpenStreetMap by Azavea](https://demos.azavea.com/building-footprint-comparison/)
 ---------------------------
-* Our project is supported by [Skolkovo Institute of Science and Technology](https://www.skoltech.ru/en)
+* Our project was supported by [Skolkovo Institute of Science and Technology](https://www.skoltech.ru/en)
 
 <image src="https://cdn.skoltech.ru/img/logo.png" width="190">
