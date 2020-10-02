@@ -1,4 +1,4 @@
-# The Open Urban Mapping project
+# Open Urban Mapping
 
 Introduction
 ------------
