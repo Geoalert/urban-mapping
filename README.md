@@ -11,7 +11,7 @@ In the map below, we've transformed both Geoalert and OSM polygons into points b
 ### [View map](https://geoalert.github.io/urban-mapping/) 
 
 
-To continue the research and implementation of Urban Mapping premium tehnology we did a few pilot projects with commercial companies. (E.g. [the description and the dataset](https://github.com/Geoalert/vidnoe_benchmark) created with Russian Post)
+To continue the research and implementation of Urban Mapping premium teсhnology we did a few pilot projects with commercial companies. (E.g. [the description and the dataset](https://github.com/Geoalert/vidnoe_benchmark) created with Russian Post)
 
 To learn more about the project [read our blog](https://medium.com/geoalert-platform-urban-monitoring/urban-mapping-54-m-buildings-in-russia-10dc942ac2c4)
 
