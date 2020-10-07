@@ -35,9 +35,9 @@ As Mapbox satellite has comparatively poor quality for Russian territory, we are
 |Rus|[**Chechnya**](https://bit.ly/30voBD4)| - | ✓ | 219,537| 6.5 | GeoPackage | 53Mb |
 
 ## Mapping contribution - use cases
-If you are Openstreestmap contributor you can use this data to contribute and accelerate your mapping efforts. Since the data is generated automatically it shouldn't be imported before you check and validate. You can preview this data using Quantum GIS, whatever you want, and to edit it locally in Openstreetmap ID ("custom Map Data"). You better also check [OSM imports community guidelines] https://wiki.openstreetmap.org/wiki/Import/Guidelines
+If you are Openstreestmap contributor you can use this data to contribute and accelerate your mapping efforts. Since the data is generated automatically it shouldn't be imported before you check and validate. You can preview this data using Quantum GIS, Openstreetmap ID ("custom Map Data"), whatever you want, and edit it locally (JOSM etc.) You better also check [OSM imports community guidelines] https://wiki.openstreetmap.org/wiki/Import/Guidelines
 
-The auto-mapping approach also can be used to help creating maps from scratch in case of emergencies as in [Irkutsk region, Russia, that was heavily flooded in the summer 2019](https://geoalert.github.io/Irkutsk-flood/) - so we appreciate any contribution and/or related data requests.
+The auto-mapping approach also can be used to help creating maps from scratch in case of **emergencies** as in [Irkutsk region, Russia, that was heavily flooded in the summer 2019](https://geoalert.github.io/Irkutsk-flood/) - so we appreciate any contribution and/or related data requests.
 
 If you have time to help with documentation, integration of datasets into third-party applications like JOSM, Rapid, etc. to help promoting this project, please check for the [issues](https://github.com/Geoalert/urban-mapping/issues) or create one. Contact us directly at [hello@geoalert.io](mailto:hello@geoalert.io)
 
