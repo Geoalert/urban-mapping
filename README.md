@@ -20,7 +20,7 @@ Based in Russia, we've picked its territory as our testing ground. By now we've 
 
 ![**Building count ratio Geoalert/OSM - Russia, by region**](src/images/comparison_OSM-Geoalert.png)
 
-[**Click here to download the source dataset in GeoJSON**](https://filebrowser.aeronetlab.space/s/INc6jlnQ8UTV6q6)
+[**Click here to download the source dataset in GeoJSON**](https://github.com/Geoalert/urban-mapping/blob/master/russia_regions_stats.geojson)
 
 
 ## Open Urban Mapping - Russia
