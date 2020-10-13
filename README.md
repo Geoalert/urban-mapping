@@ -28,9 +28,9 @@ Based in Russia, we've picked its territory as our testing ground. By now we've 
 Open datasets are created based on ["Mapbox Satellite"](https://www.mapbox.com/maps/satellite) in order to be compatible with the OpenStreetMap license and contribution guides ([#License](#license)).
 The permissive license of the Mapbox's "Mapbox Satellite" product comes at the cost of uneven quality of the imagery. For some less demanded (e.g. less populated) areas, only low-resolution and/or low-quality (winter/clouded/darkened) imagery is available. This makes our results equally uneven in terms of the quality of building detection. At times, the only way to achieve a decent result is to resort to manual validation and/or digitizing. Hence, we ask you to be ready for running into such areas of relatively poor coverage. We plan to gradually update our dataset manually or automatically if new, improved imagery arrives.
 
-|Country|Region|Building heights| Building classes |Feature count| Count ratio, OSM, sep 2020 | Format|Size (unzipped)|
+|Country|Region|Building Heights| Building Classes |Feature Count| Count Ratio to OSM, Sep 2020 | Format|Size (unzipped)|
 |-------------|------------|----------|----------|-----------|------------|------------|-------------|
-|Russia|[**Chechnya**](https://bit.ly/30voBD4)| - | - | 219,537| 6.5 | GeoPackage | 53Mb |
+|Russia|[**Chechnya**](https://bit.ly/30voBD4)| - | - | 219,428| 6.5 | GeoPackage | 50Mb |
 |Russia|[**Tyva**](https://bit.ly/3lEh6l8)| - | - | 31,463| 3.8 | GeoPackage | 10Mb |
 
 ## Mapping contribution - use cases
