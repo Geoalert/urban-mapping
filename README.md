@@ -26,12 +26,12 @@ Based in Russia, we've picked its territory as our testing ground. By now we've 
 ## Open Urban Mapping - Russia
 
 Open datasets are created based on ["Mapbox Satellite"](https://www.mapbox.com/maps/satellite) in order to be compatible with the OpenStreetMap license and contribution guides ([#License](#license)).
-The permissive license of the Mapbox's "Mapbox Satellite" product comes at the cost of uneven quality of the imagery. For some less demanded (e.g. less populated) areas, only low-resolution and/or low-quality (winter/clouded/darkened) imagery is available. This makes our results equally uneven in terms of the quality of building detection. At times, the only way to achieve a decent result is to resort to manual validation and/or digitizing. Hence, we ask you to be ready for running into such areas of relatively poor coverage. We plan to gradually update our dataset manually or automatically if new, improved imagery arrives.
+The permissive license of the Mapbox's "Mapbox Satellite" product comes at the cost of uneven quality of the imagery. For some less demanded (e.g. less populated) areas, only low-resolution and/or low-quality (winter/clouded/darkened) imagery is available. This makes our results equally uneven in terms of the quality of building detection. At times, the only way to achieve a decent result is to resort to manual validation and/or digitizing. Hence, we ask you to be ready for running into such areas of relatively poor coverage. We plan to gradually update our dataset manually or automatically if new, improved imagery arrives. In the data available via the link below, is_osm attribute designates whether a given contour was obtained from OSM (where true).
 
 |Country|Region|Building Heights| Building Classes |Feature Count| Count Ratio to OSM, Sep 2020 | Format|Size (unzipped)|
 |-------------|------------|----------|----------|-----------|------------|------------|-------------|
 |Russia|[**Chechnya**](https://bit.ly/30voBD4)| - | - | 219,428| 6.5 | GeoPackage | 50Mb |
-|Russia|[**Tyva**](https://bit.ly/3lEh6l8)| - | - | 31,463| 3.8 | GeoPackage | 10Mb |
+|Russia|[**Tyva**](https://bit.ly/3lEh6l8)| - | - | 31,937| 3.8 | GeoPackage | 8Mb |  
 
 ## Mapping contribution - use cases
 If you are an OpenStreetMap contributor, you can use this data to contribute to OSM directly or accelerate your own mapping efforts. Since the data was generated automatically, it should be thoroughly validated before import. You can preview and edit the data using QGIS, the OSM ID editor ("custom Map Data"), or JOSM. We also strongly recommend that you check [OSM imports community guidelines] https://wiki.openstreetmap.org/wiki/Import/Guidelines
