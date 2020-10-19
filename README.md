@@ -31,7 +31,8 @@ The permissive license of the Mapbox's "Mapbox Satellite" product comes at the c
 |Country|Region|Building Heights| Building Classes |Feature Count| Count Ratio to OSM, Sep 2020 | Format|Size (unzipped)|
 |-------------|------------|----------|----------|-----------|------------|------------|-------------|
 |Russia|[**Chechnya**](https://bit.ly/30voBD4)| - | - | 219,428| 6.5 | GeoPackage | 50Mb |
-|Russia|[**Tyva**](https://bit.ly/3lEh6l8)| - | - | 31,937| 3.8 | GeoPackage | 8Mb |  
+|Russia|[**Tyva**](https://bit.ly/3lEh6l8)| - | - | 31,937| 3.8 | GeoPackage | 8Mb |
+|Russia|[**Moscow region**](https://bit.ly/2T6R5P8)| - | ✓ | 2,616,185 | 2.8 | GeoPackage | 186Mb |
 
 ## Mapping contribution - use cases
 If you are an OpenStreetMap contributor, you can use this data to contribute to OSM directly or accelerate your own mapping efforts. Since the data was generated automatically, it should be thoroughly validated before import. You can preview and edit the data using QGIS, the OSM ID editor ("custom Map Data"), or JOSM. We also strongly recommend that you check [OSM imports community guidelines] https://wiki.openstreetmap.org/wiki/Import/Guidelines
