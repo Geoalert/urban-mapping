@@ -27,4 +27,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm run deploy
+    
+    - name: GitHub Pages
+      # You may pin to the exact commit or the version.
+      # uses: crazy-max/ghaction-github-pages@47836d5feff6e01257a3ff5faf9a04f2f2454012
+      uses: crazy-max/ghaction-github-pages@v2.4.1
+      with:
+        # Build directory to deploy
+        build_dir: dist
+
