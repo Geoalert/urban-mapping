@@ -30,8 +30,8 @@ The permissive license of the Mapbox's "Mapbox Satellite" product comes at the c
 
 |Country|Region|Building Heights| Classes |Feature Count| Count Ratio to OSM, Feb 2021| Statistics - places | Format | Size (unzipped) |
 |-------------|------------|----------|----------|-----------|------------|------------|----------|-------------|
-|Russia|[**Chechnya**](https://bit.ly/3hpwjaz)| - | - | 542,636| 15.7 | ✓ | GeoPackage | 138MB |
-|Russia|[**Tyva**](https://bit.ly/3yFNDOt)| - | - | 66,299| 8.3 | - | GeoPackage | 15MB |
+|Russia|[**Chechnya**](https://bit.ly/3hICDsG)| - | - | 542,636| 15.7 | ✓ | GeoPackage | 138MB |
+|Russia|[**Tyva**](https://bit.ly/3AGOVuk)| - | - | 66,299| 8.3 | - | GeoPackage | 15MB |
 |Russia|[**Moscow region**](https://bit.ly/2T6R5P8)| - | ✓ | 2,617,993 | 2.9 | ✓ | GeoPackage | 607MB |
 
 [**Some statistics by places in the regions**](https://bit.ly/36wstr4)
