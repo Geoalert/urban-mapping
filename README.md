@@ -28,10 +28,10 @@ Based in Russia, we've picked its territory as our testing ground. By now we've 
 Open datasets are created based on ["Mapbox Satellite"](https://www.mapbox.com/maps/satellite) in order to be compatible with the OpenStreetMap license and contribution guides ([#License](#license)).
 The permissive license of the Mapbox's "Mapbox Satellite" product comes at the cost of uneven quality of the imagery. For some less demanded (e.g. less populated) areas, only low-resolution and/or low-quality (winter/clouded/darkened) imagery is available. This makes our results equally uneven in terms of the quality of building detection. At times, the only way to achieve a decent result is to resort to manual validation and/or digitizing. Hence, we ask you to be ready for running into such areas of relatively poor coverage. We plan to gradually update our dataset manually or automatically if new, improved imagery arrives. In the data available via the link below, is_osm attribute designates whether a given contour was obtained from OSM (where true).
 
-|Country|Region|Building Heights| Classes |Feature Count| Count Ratio to OSM, Sep 202| Statistics - places | Format | Size (unzipped) |
+|Country|Region|Building Heights| Classes |Feature Count| Count Ratio to OSM, Feb 2021| Statistics - places | Format | Size (unzipped) |
 |-------------|------------|----------|----------|-----------|------------|------------|----------|-------------|
-|Russia|[**Chechnya**](https://bit.ly/30voBD4)| - | - | 229,873| 6.6 | ✓ | GeoPackage | 76MB |
-|Russia|[**Tyva**](https://bit.ly/3lEh6l8)| - | - | 32,765| 4.1 | - | GeoPackage | 15MB |
+|Russia|[**Chechnya**](https://bit.ly/3hpwjaz)| - | - | 542,636| 15.7 | ✓ | GeoPackage | 138MB |
+|Russia|[**Tyva**](https://bit.ly/3yFNDOt)| - | - | 66,299| 8.3 | - | GeoPackage | 15MB |
 |Russia|[**Moscow region**](https://bit.ly/2T6R5P8)| - | ✓ | 2,617,993 | 2.9 | ✓ | GeoPackage | 607MB |
 
 [**Some statistics by places in the regions**](https://bit.ly/36wstr4)
