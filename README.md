@@ -27,8 +27,7 @@ Based in Russia, we've picked its territory as our testing ground. So far we've 
 ## Project history
 
 At our first try we managed to process imagery for all populated ares in Russia. But the results were poor in many regions due to the low quality of Mapbox satellite imagery (see our related blog posts). 
-Since Mapbox drastically updated its imagery we started to reprocess some regions - check if updated.
-We are looking forward to updating all Russian regions depending on the community demand.
+Since Mapbox drastically updated its imagery we started reprocessing some regions - check here if updated - depending on the community demand and the most incompleteness in Openstreetmap building coverage.
 
 
 ## Open Urban Mapping - download datasets
@@ -44,8 +43,8 @@ Open datasets are created based on ["Mapbox Satellite"](https://www.mapbox.com/m
 
 ## Mapping contribution
 
-If you are an OpenStreetMap contributor, you can use this data to contribute to OSM directly or accelerate your own mapping efforts. Since the data was generated automatically, it should be thoroughly validated before import. You can preview and edit the data using QGIS, the OSM ID editor ("custom Map Data"), or JOSM. We also strongly recommend that you check [OSM imports community guidelines] https://wiki.openstreetmap.org/wiki/Import/Guidelines
-In the datasets for download, the *"source"* attribute designates whether a given building footprint was obtained from OSM or extracted from the imagery to help to filter features before edits or import.
+If you are an OpenStreetMap contributor, you can use this data to contribute to OSM directly or accelerate your own mapping efforts. Since the data was generated automatically, it should be thoroughly validated before import. You can preview and edit the data using QGIS, the OSM ID editor ("custom Map Data"), or JOSM. We also strongly recommend that you check [OSM imports community guidelines](https://wiki.openstreetmap.org/wiki/Import/Guidelines).
+We've created the Open Urban Mapping [wiki](https://wiki.openstreetmap.org/wiki/Geoalert_Open_Urban_Mapping) - you can find some tips on editing and doing imports based on our datasets.
 
 The auto-mapping approach can also be used to help create maps from scratch in times of **emergencies** such as in [Irkutsk region, Russia, that was heavily flooded in the summer 2019](https://geoalert.github.io/Irkutsk-flood/), so we appreciate any contribution and/or related data requests.
 
