@@ -112,7 +112,7 @@ The input data is copyrighted by the data providers but is not distributed along
 * Data format - GeoPackage or GeoJSON
 
 ## Media references
-* [Chechnya update - the worst mapped among other regions in OSM](https://geoalert.medium.com/open-urban-mapping-update-chechnya-and-tyva-40798c127265)
+* [Chechnya update - the least mapped region in OSM](https://geoalert.medium.com/open-urban-mapping-update-chechnya-and-tyva-40798c127265)
 
 ## References
 * [Subscribe to Geoalert blog](https://medium.com/@geoalert)
