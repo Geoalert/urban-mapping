@@ -34,11 +34,11 @@ Since Mapbox drastically updated its imagery we started reprocessing some region
 
 Open datasets are created based on ["Mapbox Satellite"](https://www.mapbox.com/maps/satellite) in order to be compatible with the OpenStreetMap license and contribution guides ([#License](#license)).
 
-|Country|Region|Building Heights| Classes |Feature Count| Count Ratio to OSM, Feb 2021| Statistics - places | Format | Size (unzipped) |
+|Country|Region|Building Heights| Classes |Feature Count| Count Ratio to OSM, Feb 2021| Format | Size (unzipped) |
 |-------------|------------|----------|----------|-----------|------------|------------|----------|-------------|
-|Russia|[**Chechnya**](https://filebrowser.aeronetlab.space/s/CeT7WidzbIGqaFa/download)| - | - | 542,636| 15.7 | ✓ | GeoPackage | 33.4MB |
-|Russia|[**Tyva**](https://filebrowser.aeronetlab.space/s/AE2iIxGN8UoYfOU/download)| - | - | 66,299| 8.3 | - | GeoPackage | 5.4MB |
-|Russia|[**Moscow region**](https://bit.ly/2T6R5P8)| - | ✓ | 2,617,993 | 2.9 | ✓ | GeoPackage | 241MB |
+|Russia|[**Chechnya**](https://filebrowser.aeronetlab.space/s/CeT7WidzbIGqaFa/download)| - | - | 542,636| 15.7 | GeoPackage | 33.4MB |
+|Russia|[**Tyva**](https://filebrowser.aeronetlab.space/s/AE2iIxGN8UoYfOU/download)| - | - | 66,299| 8.3 | GeoPackage | 5.4MB |
+|Russia|[**Moscow region**](https://bit.ly/2T6R5P8)| - | ✓ | 2,617,993 | 2.9 | GeoPackage | 241MB |
 
 
 ## Mapping contribution
@@ -51,6 +51,57 @@ The auto-mapping approach can also be used to help create maps from scratch in t
 If you'd like to help us with documentation, integration of datasets into third-party applications like JOSM, RapID, etc., or promote this project, please check out the [issues](https://github.com/Geoalert/urban-mapping/issues) or create one to submit your request. You can also contact us directly at [hello@geoalert.io](mailto:hello@geoalert.io)
 
 
+## Urban Mapping API
+
+In case you don't want to downloald the whole thing for one region - we provide API to extract features from datasets by polygon area. 
+The service streams geojson features, producing a chunked stream as an http response. It should be safe to fetch reasonably large pieces of data. The output data is in `GeoJSON` format.
+
+Endpoint: `https://urban-db-vp.geoalert.io/api/v0/collections/b8a3381f-70e1-4946-b5cb-3d68bbf05946/export`  
+User: `open_user`
+Password: `ddPUNyp6fzvC`  
+
+
+*  The query area must be specified in lat-lon coordinates by the `polygon` in geojson format  
+*  The `points` param, when set to `true`, converts feature geometries into points (a point inside the geometry, closest to the centroid). Defaults to `false`.
+
+#
+E.g.:  
+
+```http
+POST /api/v0/collections/b8a3381f-70e1-4946-b5cb-3d68bbf05946/export?points=true HTTP/1.1
+Host: urban-db-vp.geoalert.io
+Content-Type: application/json
+Content-Length: 553
+{"type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.332916259765625,
+              55.677197244655474
+            ],
+            [
+              37.35557556152344,
+              55.677197244655474
+            ],
+            [
+              37.35557556152344,
+              55.6910360645666
+            ],
+            [
+              37.332916259765625,
+              55.6910360645666
+            ],
+            [
+              37.332916259765625,
+              55.677197244655474
+            ]
+          ]
+        ] }
+``` 
+
+[See full API documentation with examples.](https://documenter.getpostman.com/view/5400715/TzmBEZwG#7efdc10c-827e-47c8-b9ea-382933a67364)
+
+
 ## License
 All data in this project is licensed under the [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/) compatible with OSM.
 The input data is copyrighted by the data providers but is not distributed along with the dataset. The Mapbox's Terms of Service state that
@@ -60,6 +111,8 @@ The input data is copyrighted by the data providers but is not distributed along
 * Coordinate reference system - EPSG: 4326
 * Data format - GeoPackage or GeoJSON
 
+## Media references
+* [Chechnya update - the worst mapped among other regions in OSM](https://geoalert.medium.com/open-urban-mapping-update-chechnya-and-tyva-40798c127265)
 
 ## References
 * [Subscribe to Geoalert blog](https://medium.com/@geoalert)
