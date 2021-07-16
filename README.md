@@ -35,7 +35,7 @@ Since Mapbox drastically updated its imagery we started reprocessing some region
 Open datasets are created based on ["Mapbox Satellite"](https://www.mapbox.com/maps/satellite) in order to be compatible with the OpenStreetMap license and contribution guides ([#License](#license)).
 
 |Country|Region|Building Heights| Classes |Feature Count| Count Ratio to OSM, Feb 2021| Format | Size (unzipped) |
-|-------------|------------|----------|----------|-----------|------------|------------|----------|-------------|
+|-------------|------------|----------|----------|-----------|------------|------------|----------|
 |Russia|[**Chechnya**](https://filebrowser.aeronetlab.space/s/CeT7WidzbIGqaFa/download)| - | - | 542,636| 15.7 | GeoPackage | 33.4MB |
 |Russia|[**Tyva**](https://filebrowser.aeronetlab.space/s/AE2iIxGN8UoYfOU/download)| - | - | 66,299| 8.3 | GeoPackage | 5.4MB |
 |Russia|[**Moscow region**](https://bit.ly/2T6R5P8)| - | ✓ | 2,617,993 | 2.9 | GeoPackage | 241MB |
