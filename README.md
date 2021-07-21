@@ -36,9 +36,9 @@ Open datasets are created based on ["Mapbox Satellite"](https://www.mapbox.com/m
 
 |Country|Region|Feature Count| Count Ratio to OSM, Feb 2021| Format | Size (unzipped) |
 |-------------|------------|----------|----------|-----------|------------|
-|Russia|[**Chechnya**](https://bit.ly/3xR4wWs)| 542,636| 15.7 | GeoPackage | 33.4MB |
-|Russia|[**Tyva**](https://bit.ly/2Unk0D8)| 66,299| 8.3 | GeoPackage | 5.4MB |
-|Russia|[**Moscow & Moscow Region**](https://bit.ly/3iuz5L6)| 3,919,167 | 3.5 | GeoPackage | 334MB |
+|Russia|[**Chechnya**](https://bit.ly/3xR4wWs)| 542,636| 15.7 | GeoPackage | 144.5MB |
+|Russia|[**Tyva**](https://bit.ly/2Unk0D8)| 66,299| 8.3 | GeoPackage | 15.4MB |
+|Russia|[**Moscow & Moscow Region**](https://bit.ly/3iuz5L6)| 3,919,167 | 3.5 | GeoPackage | 863MB |
 
 
 ## Mapping contribution
