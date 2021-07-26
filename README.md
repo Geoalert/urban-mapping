@@ -107,6 +107,8 @@ All data in this project is licensed under the [Open Database License (ODbL)](ht
 The input data is copyrighted by the data providers but is not distributed along with the dataset. The Mapbox's Terms of Service state that
 >You may use Studio or third-party software to trace Mapbox maps solely comprised of satellite imagery ("Mapbox Satellite Imagery") and produce derivative vector datasets for non-commercial purposes and for OpenStreetMap
 
+**You are free to copy, distribute, transmit and adapt this data, as long as you credit "Geoalert / Mapbox" as the data source. You are supposed to distribute the derived data under the same license.**
+
 ## Technical details
 * Coordinate reference system - EPSG: 4326
 * Data format - GeoPackage or GeoJSON
@@ -122,4 +124,4 @@ The input data is copyrighted by the data providers but is not distributed along
 ---------------------------
 * Our project was supported by [Skolkovo Institute of Science and Technology](https://www.skoltech.ru/en)
 
-<image src="https://cdn.skoltech.ru/img/logo.png" width="190">
+<image src="https://cdn.skoltech.ru/img/logo.png" width="180">
