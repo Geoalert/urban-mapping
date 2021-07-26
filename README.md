@@ -114,7 +114,8 @@ The input data is copyrighted by the data providers but is not distributed along
 * Data format - GeoPackage or GeoJSON
 
 ## Media references
-* [Chechnya update - the least mapped region in OSM](https://geoalert.medium.com/open-urban-mapping-update-chechnya-and-tyva-40798c127265)
+* [Moscow and Moscow region update, Jul 23 2021 - +1M building footprints (in Russian)](https://geoalert.medium.com/open-urban-mapping-api-%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-%D0%B8-%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B0-92dd36fb56dd)
+* [Chechnya update, Jul 16 2021 - the least mapped region in OSM](https://geoalert.medium.com/open-urban-mapping-update-chechnya-and-tyva-40798c127265)
 
 ## References
 * [Subscribe to Geoalert blog](https://medium.com/@geoalert)
