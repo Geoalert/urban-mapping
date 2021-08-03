@@ -123,6 +123,9 @@ The input data is copyrighted by the data providers but is not distributed along
 * [RapID - Facebook editor for OpenStreetMap](https://github.com/facebookincubator/RapiD)
 * [Comparison of MS building footprints and OpenStreetMap by Azavea](https://demos.azavea.com/building-footprint-comparison/)
 ---------------------------
-* Our project was supported by [Skolkovo Institute of Science and Technology](https://www.skoltech.ru/en)
+Our project was supported by: 
+* [Skolkovo Institute of Science and Technology](https://www.skoltech.ru/en)
+![](src/images/logo-skoltech.png) 
 
-<image src="https://cdn.skoltech.ru/img/logo.png" width="180">
+* [Russian Innovation Promotion Fund](https://fasie.ru/)
+![](src/images/logo-fasie.png)
