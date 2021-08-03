@@ -124,10 +124,8 @@ The input data is copyrighted by the data providers but is not distributed along
 * [Comparison of MS building footprints and OpenStreetMap by Azavea](https://demos.azavea.com/building-footprint-comparison/)
 ---------------------------
 Our project was supported by: 
-* [Skolkovo Institute of Science and Technology](https://www.skoltech.ru/en)
 
-![](src/images/logo-skoltech.png) 
 
-* [Russian Innovation Promotion Fund](https://fasie.ru/)
+[![Skolkovo Institute of Science and Technology](src/images/logo-skoltech.png)](https://www.skoltech.ru/en)
 
-![](src/images/logo-fasie.png)
+[![Russian Innovation Promotion Fund](src/images/logo-fasie.png)(https://fasie.ru/)]
