@@ -107,12 +107,15 @@ All data in this project is licensed under the [Open Database License (ODbL)](ht
 The input data is copyrighted by the data providers but is not distributed along with the dataset. The Mapbox's Terms of Service state that
 >You may use Studio or third-party software to trace Mapbox maps solely comprised of satellite imagery ("Mapbox Satellite Imagery") and produce derivative vector datasets for non-commercial purposes and for OpenStreetMap
 
+**You are free to copy, distribute, transmit and adapt this data, as long as you credit "Geoalert / Mapbox" as the data source. You are supposed to distribute the derived data under the same license.**
+
 ## Technical details
 * Coordinate reference system - EPSG: 4326
 * Data format - GeoPackage or GeoJSON
 
 ## Media references
-* [Chechnya update - the least mapped region in OSM](https://geoalert.medium.com/open-urban-mapping-update-chechnya-and-tyva-40798c127265)
+* [Moscow and Moscow region update, Jul 23 2021: 1M+ building footprints (in Russian)](https://geoalert.medium.com/open-urban-mapping-api-%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-%D0%B8-%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B0-92dd36fb56dd)
+* [Chechnya update, Jul 16 2021 - the least mapped region in OSM](https://geoalert.medium.com/open-urban-mapping-update-chechnya-and-tyva-40798c127265)
 
 ## References
 * [Subscribe to Geoalert blog](https://medium.com/@geoalert)
@@ -120,6 +123,9 @@ The input data is copyrighted by the data providers but is not distributed along
 * [RapID - Facebook editor for OpenStreetMap](https://github.com/facebookincubator/RapiD)
 * [Comparison of MS building footprints and OpenStreetMap by Azavea](https://demos.azavea.com/building-footprint-comparison/)
 ---------------------------
-* Our project was supported by [Skolkovo Institute of Science and Technology](https://www.skoltech.ru/en)
+Our project was supported by: 
 
-<image src="https://cdn.skoltech.ru/img/logo.png" width="190">
+
+[![Skolkovo Institute of Science and Technology](src/images/logo-skoltech.png)](https://www.skoltech.ru/en)
+
+[![Russian Innovation Promotion Fund](src/images/logo-fasie.png)](https://fasie.ru/)
