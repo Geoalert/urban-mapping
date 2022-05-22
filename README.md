@@ -2,44 +2,35 @@
 
 Introduction
 ------------
-This project attempts to automate the process of digitizing building footprints by delegating the routine to **neural networks**. It is now possible to digitize every building in the world using **computer vision and satellite imagery**. We strive to contribute some of our results to the community by filling the data gaps in [OpenStreetMap (OSM)](https://www.openstreetmap.org) coverage.      
+This project was mainly aimed at demonstrating "AI-Mapping" technology using Computer vision and Deel learning. As soon as there are more tools and open data we reviewed the concept to share specific datasets with the community. It is dedicated to analysts of urban environment and land management as well as to the wide range of educational and resesrch projects. One more thing is to provide this data via [#API](#API) for more convenient and interoperable use.
 
 ## Demonstration of Urban Mapping
 
-In the map below, we've transformed both Geoalert and OSM polygons (relevant at the beginning of 2020 year) into points by taking their centroids and compared the results. [Vector tiles](https://en.wikipedia.org/wiki/Vector_tiles) are used to visulalize both layers.
+### Russia ###
 
-!!!!
-### [View map](https://geoalert.github.io/urban-mapping/) 
-!!!!
+[**Building count ratio Geoalert/OSM - Russia, by region, 2019. Click here to download the source dataset in GeoJSON**](https://github.com/Geoalert/urban-mapping/blob/master/russia_regions_stats.geojson)
 
-To learn more about the Open Urban Mapping project [read our blog](https://medium.com/geoalert-platform-urban-monitoring/open-urban-mapping-russia-ca978dfb4636)
-
-
-## Buildings Statistics - Russia
-
-Based in Russia, we've picked its territory as our testing ground. So far we've automaticaly extracted **54+ mln building features** using different satellite imagery sources. We compared our statistics with OSM by buildings count. The statistics are displayed by [region](https://en.wikipedia.org/wiki/Federal_subjects_of_Russia).
-
-![**Building count ratio Geoalert/OSM - Russia, by region**](src/images/comparison_OSM-Geoalert.png)
-
-[**Click here to download the source dataset in GeoJSON**](https://github.com/Geoalert/urban-mapping/blob/master/russia_regions_stats.geojson)
-
-
-## Project history
-
-At our first try we managed to process imagery for all populated ares in Russia. But the results were poor in many regions due to the low quality of Mapbox satellite imagery (see our related blog posts). 
-Since Mapbox drastically updated its imagery we started reprocessing some regions - check here if updated - depending on the community demand and the most incompleteness in Openstreetmap building coverage.
-
-
-## Open Urban Mapping - download datasets
-
-Open datasets are created based on ["Mapbox Satellite"](https://www.mapbox.com/maps/satellite) in order to be compatible with the OpenStreetMap license and contribution guides ([#License](#license)).
 
 |Country|Region|Feature Count| Count Ratio to OSM, Feb 2021| Format | Size (unzipped) |
 |-------------|------------|----------|----------|-----------|------------|
-|Russia|[**Chechnya**](https://bit.ly/3xR4wWs)| 542,636| 15.7 | GeoPackage | 144.5MB |
-|Russia|[**Tyva**](https://bit.ly/2Unk0D8)| 74,696| 8.5 | GeoPackage | 19.0MB |
-|Russia|[**Moscow & Moscow Region**](https://bit.ly/3iuz5L6)| 3,919,167 | 3.5 | GeoPackage | 863MB |
+|Russia|[**Chechnya**](https://filebrowser.aeronetlab.space/s/hj9NzpVuZLu16LU/download)| 542,636| 15.7 | GeoPackage | 144.5MB |
+|Russia|[**Tyva**](https://filebrowser.aeronetlab.space/s/AE2iIxGN8UoYfOU/download)| 74,696| 8.5 | GeoPackage | 19.0MB |
+|Russia|[**Moscow & Moscow Region**](https://filebrowser.aeronetlab.space/s/9XRq7kvRQSreQu2/download)| 3,919,167 | 3.5 | GeoPackage | 863MB |
 
+### Uzbekistan ###
+
+|Country|Region|Feature Count| Count Ratio to OSM| Format | Size (unzipped) |
+|-------------|------------|----------|----------|-----------|------------|
+|Uzbekistan|[**Tashkent**](https://filebrowser.aeronetlab.space/s/eVanE4T9AIR46TY/download)| ~387,000| -- | GeoPackage | 276MB |
+
+**Layers:**
+
+|Name|Description|Feature Count|
+|-------------|------------|----------|
+|Construction Tashkent| Construction sites detected in Tashkent area. Note, the date of the Mapbox imagery is not recent and these areas are changing fast | ~500|
+|Building footprints with OSM| Building footprints with heights merged with OSM data by 0.5 IoU threshold | ~387.000|
+|Building footprints without OSM| Building footprints with heights | ~359.000|
+|Tashkent AOI buffered| Admin boundaries of Tashkent city area with 0.5 degree buffered zone | ~359.000|
 
 ## Mapping contribution
 
@@ -51,7 +42,7 @@ The auto-mapping approach can also be used to help create maps from scratch in t
 If you'd like to help us with documentation, integration of datasets into third-party applications like JOSM, RapID, etc., or promote this project, please check out the [issues](https://github.com/Geoalert/urban-mapping/issues) or create one to submit your request. You can also contact us directly at [hello@geoalert.io](mailto:hello@geoalert.io)
 
 
-## Urban Mapping API
+## API
 
 In case you don't want to downloald the whole thing for one region - we provide API to extract features from datasets by polygon area. 
 The service streams geojson features, producing a chunked stream as an http response. It should be safe to fetch reasonably large pieces of data. The output data is in `GeoJSON` format.
@@ -103,8 +94,13 @@ Content-Length: 553
 
 
 ## License
-All data in this project is licensed under the [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/) compatible with OSM.
-The input data is copyrighted by the data providers but is not distributed along with the dataset. The Mapbox's Terms of Service state that
+
+Open datasets are created based on ["Mapbox Satellite"](https://www.mapbox.com/maps/satellite) in order to be compatible with the OpenStreetMap license and contribution guides.
+
+All data in this project is licensed under the [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/).
+The input imagery data is copyrighted by the data providers but is not distributed along with the dataset. 
+The Mapbox's Terms of Service states that:
+
 >You may use Studio or third-party software to trace Mapbox maps solely comprised of satellite imagery ("Mapbox Satellite Imagery") and produce derivative vector datasets for non-commercial purposes and for OpenStreetMap
 
 **You are free to copy, distribute, transmit and adapt this data, as long as you credit "Geoalert / Mapbox" as the data source. You are supposed to distribute the derived data under the same license.**
@@ -121,7 +117,6 @@ The input data is copyrighted by the data providers but is not distributed along
 * [Subscribe to Geoalert blog](https://medium.com/@geoalert)
 * [Microsoft buildings footprints](https://github.com/microsoft/USBuildingFootprints)
 * [RapID - Facebook editor for OpenStreetMap](https://github.com/facebookincubator/RapiD)
-* [Comparison of MS building footprints and OpenStreetMap by Azavea](https://demos.azavea.com/building-footprint-comparison/)
 ---------------------------
 Our project was supported by: 
 
