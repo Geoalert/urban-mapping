@@ -21,7 +21,7 @@ This project was mainly aimed at demonstrating "AI-Mapping" technology using Com
 
 |Country|Region|Feature Count| Count Ratio to OSM| Format | Size (unzipped) |
 |-------------|------------|----------|----------|-----------|------------|
-|Uzbekistan|[**Tashkent**](https://filebrowser.aeronetlab.space/s/eVanE4T9AIR46TY/download)| ~387,000| -- | GeoPackage | 276MB |
+|Uzbekistan|[**Tashkent**](https://filebrowser.aeronetlab.space/s/eVanE4T9AIR46TY/download)| ~498,191| -- | GeoPackage | 149MB |
 
 **Layers:**
 
@@ -30,7 +30,22 @@ This project was mainly aimed at demonstrating "AI-Mapping" technology using Com
 |Construction Tashkent| Construction sites detected in Tashkent area. Note, the date of the Mapbox imagery is not recent and these areas are changing fast | ~500|
 |Building footprints with OSM| Building footprints with heights merged with OSM data by 0.5 IoU threshold | ~387.000|
 |Building footprints without OSM| Building footprints with heights | ~359.000|
-|Tashkent AOI buffered| Admin boundaries of Tashkent city area with 0.5 degree buffered zone | ~359.000|
+|Tashkent AOI buffered| Admin boundaries of Tashkent city area with 0.5 degree buffered zone | ~944 sq.km|
+
+### Mongolia ###
+
+|Country|Region|Feature Count| Count Ratio to OSM| Format | Size (unzipped) |
+|-------------|------------|----------|----------|-----------|------------|
+|Mongolia|[**Ulanbaator**](https://filebrowser.aeronetlab.space/s/eVanE4T9AIR46TY/download)| ~498,000| -- | GeoPackage | 150MB |
+
+**Layers:**
+
+|Name|Description|Feature Count|
+|-------------|------------|----------|
+|MS Buildings| Building footprints of metropolitan area of Ulanbaator, extracted from [MS datasets](https://github.com/microsoft/GlobalMLBuildingFootprints) | ~391,500|
+|Ulanbaator yurts| Yurts detected in ["mapping experiment"](https://github.com/aliaksandr960/ulaanbaatar_yurts) by Alex H.| ~102,300|
+|Geoalert Buildings| Building footprints for the two remopte districts of Ulanbaator missed in MS Buildings for Mongolia| ~4,330|
+|Ulanbaator admin| Admin boundaries of Ulanbaator | ~34923 sq.km|
 
 ## Mapping contribution
 
