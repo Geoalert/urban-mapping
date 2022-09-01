@@ -135,7 +135,4 @@ The Mapbox's Terms of Service states that:
 ---------------------------
 Our project was supported by: 
 
-
-[![Skolkovo Institute of Science and Technology](src/images/logo-skoltech.png)](https://www.skoltech.ru/en)
-
 [![Russian Innovation Promotion Fund](src/images/logo-fasie.png)](https://fasie.ru/)
