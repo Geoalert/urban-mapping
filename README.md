@@ -62,50 +62,7 @@ If you'd like to help us with documentation, integration of datasets into third-
 In case you don't want to downloald the whole thing for one region - we provide API to extract features from datasets by polygon area. 
 The service streams geojson features, producing a chunked stream as an http response. It should be safe to fetch reasonably large pieces of data. The output data is in `GeoJSON` format.
 
-Endpoint: `https://urban-db-vp.geoalert.io/api/v0/collections/b8a3381f-70e1-4946-b5cb-3d68bbf05946/export`  
-User: `open_user`
-Password: `ddPUNyp6fzvC`  
-
-
-*  The query area must be specified in lat-lon coordinates by the `polygon` in geojson format  
-*  The `points` param, when set to `true`, converts feature geometries into points (a point inside the geometry, closest to the centroid). Defaults to `false`.
-
-#
-E.g.:  
-
-```http
-POST /api/v0/collections/b8a3381f-70e1-4946-b5cb-3d68bbf05946/export?points=true HTTP/1.1
-Host: urban-db-vp.geoalert.io
-Content-Type: application/json
-Content-Length: 553
-{"type": "Polygon",
-        "coordinates": [
-          [
-            [
-              37.332916259765625,
-              55.677197244655474
-            ],
-            [
-              37.35557556152344,
-              55.677197244655474
-            ],
-            [
-              37.35557556152344,
-              55.6910360645666
-            ],
-            [
-              37.332916259765625,
-              55.6910360645666
-            ],
-            [
-              37.332916259765625,
-              55.677197244655474
-            ]
-          ]
-        ] }
-``` 
-
-[See full API documentation with examples.](https://documenter.getpostman.com/view/5400715/TzmBEZwG#7efdc10c-827e-47c8-b9ea-382933a67364)
+For now the service is terminated.
 
 
 ## License
@@ -130,9 +87,6 @@ The Mapbox's Terms of Service states that:
 
 ## References
 * [Subscribe to Geoalert blog](https://medium.com/@geoalert)
-* [Microsoft buildings footprints](https://github.com/microsoft/USBuildingFootprints)
+* [Microsoft building footprints](https://github.com/microsoft/USBuildingFootprints)
 * [RapID - Facebook editor for OpenStreetMap](https://github.com/facebookincubator/RapiD)
 ---------------------------
-Our project was supported by: 
-
-[![Russian Innovation Promotion Fund](src/images/logo-fasie.png)](https://fasie.ru/)
