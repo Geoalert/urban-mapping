@@ -2,50 +2,44 @@
 
 Introduction
 ------------
-This project was mainly aimed at demonstrating "AI-Mapping" technology using Computer vision and Deel learning. As soon as there are more tools and open data we reviewed the concept to share specific datasets with the community. It is dedicated to analysts of urban environment and land management as well as to the wide range of educational and resesrch projects. One more thing is to provide this data via [#API](#API) for more convenient and interoperable use.
+This project was mainly aimed at demonstrating "AI-Mapping" leveraging AI technologies to analyse and digitize aerial and satellite imageru. As soon as there are more tools and more open data available we reviewed the concept to share specific datasets with the community. It is dedicated to analysis of urban environment and land resources as well as to the wide range of educational and resesrch projects.
 
-## Demonstration of Urban Mapping
+## Open Datasets
 
-### Russia ###
+### Vegetation in cities ###
 
-[**Building count ratio Geoalert/OSM - Russia, by region, 2019. Click here to download the source dataset in GeoJSON**](https://github.com/Geoalert/urban-mapping/blob/master/russia_regions_stats.geojson)
+| Region | Name | Area | Download |
+|-------------|------------|----------|----------|
+|Central Asia| **5 cities - central areas** | 5*100km² | [Geojson, 84Mb](https://minio-production.mapflow.ai/public/data/5cities_central_Asia_vegetation.gpkg.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2F5cities_central_Asia_vegetation.geojson.zip)  [GeoPackage, 66Mb](https://minio-production.mapflow.ai/public/data/5cities_central_Asia_vegetation.gpkg.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2F5cities_central_Asia_vegetation.gpkg.zip) |
 
+![**Central Asia - cities vegetation**](images/cities_vegetation.png)
 
-|Country|Region|Feature Count| Count Ratio to OSM, Feb 2021| Format | Size (unzipped) |
+👉 [Download this PDF showing green patterns in European cities](images/Green-Patterns.pdf)
+
+![**European cities - urban green patterns**](images/Green-Patterns-preview.png)
+
+### Russia - building footprints ###
+
+|Country|Region|Feature Count| Count Ratio to OSM, Feb 2021| Format | Size (unzipped) | Last update |
 |-------------|------------|----------|----------|-----------|------------|
-|Russia|[**Chechnya**](https://filebrowser.aeronetlab.space/s/hj9NzpVuZLu16LU/download)| 542,636| 15.7 | GeoPackage | 144.5MB |
-|Russia|[**Tyva**](https://filebrowser.aeronetlab.space/s/AE2iIxGN8UoYfOU/download)| 74,696| 8.5 | GeoPackage | 19.0MB |
-|Russia|[**Moscow & Moscow Region**](https://filebrowser.aeronetlab.space/s/9XRq7kvRQSreQu2/download)| 3,919,167 | 3.5 | GeoPackage | 863MB |
+|Russia|[**Chechnya**](https://filebrowser.aeronetlab.space/s/hj9NzpVuZLu16LU/download)| 542,636| 15.7 | GeoPackage | 144.5MB | 2021 |
+|Russia|[**Tyva**](https://filebrowser.aeronetlab.space/s/AE2iIxGN8UoYfOU/download)| 74,696| 8.5 | GeoPackage | 19.0MB | 2021 |
+|Russia|[**Moscow & Moscow Region**](https://filebrowser.aeronetlab.space/s/9XRq7kvRQSreQu2/download)| 3,919,167 | 3.5 | GeoPackage | 863MB | 2021 |
 
 ### Uzbekistan ###
 
-|Country|Region|Feature Count| Count Ratio to OSM| Format | Size (unzipped) |
-|-------------|------------|----------|----------|-----------|------------|
-|Uzbekistan|[**Tashkent**](https://filebrowser.aeronetlab.space/s/eVanE4T9AIR46TY/download)| ~498,191| -- | GeoPackage | 149MB |
+|Region|Name | Feature Count | Format | Size (zipped) |
+|-------------|------------|----------|----------|-----------|
+|Uzbekistan|[**Admin boundaries with population**](https://minio-production.mapflow.ai/public/data/kontur_boundaries_UZ_20220407.gpkg.gz?Content-Disposition=attachment%3B%20filename%3D%22data%2Fkontur_boundaries_UZ_20220407.gpkg.gz)| ~138| GeoPackage | 1.3MB |
+|Uzbekistan|[**Kontur population 500m**](https://minio-production.mapflow.ai/public/data/kontur_population_UZ_20220630.gpkg.gz?Content-Disposition=attachment%3B%20filename%3D%22data%2Fkontur_population_UZ_20220630.gpkg.gz)| ~108,000| GeoPackage | 6.5MB |
+|Tashkent|[**Geoalert building footprints**](https://minio-production.mapflow.ai/public/data/Tashkent_buildings_Mapflow.gpkg.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2FTashkent_buildings_Mapflow.gpkg.zip)| ~387,000| GeoPackage | 57MB |
+|Tashkent|[**Geoalert construction detections**](https://minio-production.mapflow.ai/public/data/Tashkent_constructions_Mapflow.geojson.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2FTashkent_constructions_Mapflow.geojson.zip)| ~515| GeoJSON | 114KB |
+|Uzbekistan|[**Geoalert building footprints, 4 cities**](https://minio-production.mapflow.ai/public/data/4cities%28Bukhara_Samarkand_Navoi_Chirchiq%29_Mapflow.gpkg.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2F4cities%28Bukhara_Samarkand_Navoi_Chirchiq%29_Mapflow.gpkg.zip)| ~301,000| GeoPackage | 31MB |
+|Uzbekistan|[**MS building footprints**](https://minio-production.mapflow.ai/public/data/Uzbekistan_MS_Buildings.gpkg.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2FUzbekistan_MS_Buildings.gpkg.zip)| ~6,500,000| GeoPackage | 684MB |
+|Uzbekistan|[**Places with population, Openstreetmap**](https://minio-production.mapflow.ai/public/data/Uzbekistan_places_OSM.geojson.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2FUzbekistan_places_OSM.geojson.zip)| ~4,800| GeoPackage | 2MB |
 
-**Layers:**
+![**UZ. population Map, based on Kontur population data**](images/uzb_population_map.png)
 
-|Name|Description|Feature Count|
-|-------------|------------|----------|
-|Construction Tashkent| Construction sites detected in Tashkent area. Note, the date of the Mapbox imagery is not recent and these areas are changing fast | ~500|
-|Building footprints with OSM| Building footprints with heights merged with OSM data by 0.5 IoU threshold | ~387.000|
-|Building footprints without OSM| Building footprints with heights | ~359.000|
-|Tashkent AOI buffered| Admin boundaries of Tashkent city area with 0.5 degree buffered zone | ~944 sq.km|
-
-### Mongolia ###
-
-|Country|Region|Feature Count| Count Ratio to OSM| Format | Size (unzipped) |
-|-------------|------------|----------|----------|-----------|------------|
-|Mongolia|[**Ulanbaator**](https://filebrowser.aeronetlab.space/s/eVanE4T9AIR46TY/download)| ~498,000| -- | GeoPackage | 150MB |
-
-**Layers:**
-
-|Name|Description|Feature Count|
-|-------------|------------|----------|
-|MS Buildings| Building footprints of metropolitan area of Ulanbaator, extracted from [MS datasets](https://github.com/microsoft/GlobalMLBuildingFootprints) | ~391,500|
-|Ulanbaator yurts| Yurts detected in ["mapping experiment"](https://github.com/aliaksandr960/ulaanbaatar_yurts) by Alex H.| ~102,300|
-|Geoalert Buildings| Building footprints for the two remopte districts of Ulanbaator missed in MS Buildings for Mongolia| ~4,330|
-|Ulanbaator admin| Admin boundaries of Ulanbaator | ~34923 sq.km|
 
 ## Mapping contribution
 
@@ -57,23 +51,12 @@ The auto-mapping approach can also be used to help create maps from scratch in t
 If you'd like to help us with documentation, integration of datasets into third-party applications like JOSM, RapID, etc., or promote this project, please check out the [issues](https://github.com/Geoalert/urban-mapping/issues) or create one to submit your request. You can also contact us directly at [hello@geoalert.io](mailto:hello@geoalert.io)
 
 
-## API
-
-In case you don't want to downloald the whole thing for one region - we provide API to extract features from datasets by polygon area. 
-The service streams geojson features, producing a chunked stream as an http response. It should be safe to fetch reasonably large pieces of data. The output data is in `GeoJSON` format.
-
-For now the service is terminated.
-
-
 ## License
 
 Open datasets are created based on ["Mapbox Satellite"](https://www.mapbox.com/maps/satellite) in order to be compatible with the OpenStreetMap license and contribution guides.
 
 All data in this project is licensed under the [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/).
 The input imagery data is copyrighted by the data providers but is not distributed along with the dataset. 
-The Mapbox's Terms of Service states that:
-
->You may use Studio or third-party software to trace Mapbox maps solely comprised of satellite imagery ("Mapbox Satellite Imagery") and produce derivative vector datasets for non-commercial purposes and for OpenStreetMap
 
 **You are free to copy, distribute, transmit and adapt this data, as long as you credit "Geoalert / Mapbox" as the data source. You are supposed to distribute the derived data under the same license.**
 
@@ -87,6 +70,7 @@ The Mapbox's Terms of Service states that:
 
 ## References
 * [Subscribe to Geoalert blog](https://medium.com/@geoalert)
+* [Mapflow.AI - AI mapping and imagery analysis platform](https://mapflow.ai)
 * [Microsoft building footprints](https://github.com/microsoft/USBuildingFootprints)
 * [RapID - Facebook editor for OpenStreetMap](https://github.com/facebookincubator/RapiD)
 ---------------------------
