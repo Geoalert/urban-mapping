@@ -21,7 +21,7 @@ This project was mainly aimed at demonstrating "AI-Mapping" leveraging AI techno
 ### Russia - building footprints ###
 
 |Country|Region|Feature Count| Count Ratio to OSM, Feb 2021| Format | Size (unzipped) | Last update |
-|-------------|------------|----------|----------|-----------|------------|
+|-------------|------------|----------|----------|-----------|------------|-------------|
 |Russia|[**Chechnya**](https://filebrowser.aeronetlab.space/s/hj9NzpVuZLu16LU/download)| 542,636| 15.7 | GeoPackage | 144.5MB | 2021 |
 |Russia|[**Tyva**](https://filebrowser.aeronetlab.space/s/AE2iIxGN8UoYfOU/download)| 74,696| 8.5 | GeoPackage | 19.0MB | 2021 |
 |Russia|[**Moscow & Moscow Region**](https://filebrowser.aeronetlab.space/s/9XRq7kvRQSreQu2/download)| 3,919,167 | 3.5 | GeoPackage | 863MB | 2021 |
