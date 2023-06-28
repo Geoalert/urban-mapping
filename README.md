@@ -18,7 +18,7 @@ This project was mainly aimed at demonstrating "AI-Mapping" leveraging AI techno
 
 ![**European cities - urban green patterns**](images/Green-Patterns-preview.png)
 
-![**Australia and New Zealand - urban green patterns**](images/Green-Patterns-AU-NZ-preview.png)
+![**Australia and New Zealand - urban green patterns**](images/Green-Patterns-AU-NZ-preview.jpeg)
 
 ### Russia - building footprints ###
 
