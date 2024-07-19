@@ -80,5 +80,5 @@ The input imagery data is copyrighted by the data providers but is not distribut
 
 | Date | Description |
 |-------------|------------|
-| 2024=07-18 | Remove Russia datasets as out-of-dated. Update Tashkent construction areas, data relevance – Sep, Oct, 2023 |
+| 2024-07-18 | Remove Russia datasets as out-of-dated. Update Tashkent construction areas, data relevance – Sep, Oct, 2023 |
 ----------------------------------
