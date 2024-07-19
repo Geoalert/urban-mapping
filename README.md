@@ -19,23 +19,23 @@ This project was mainly aimed at demonstrating "AI-Mapping" leveraging AI techno
 ![**European cities - urban green patterns**](images/Green-Patterns-preview.png)
 
 ![**Australia and New Zealand - urban green patterns**](images/Green-Patterns-AU-NZ-preview.jpeg)
-
+<!-- 
 ### Russia - building footprints ###
 
 |Country|Region|Feature Count| Count Ratio to OSM, Feb 2021| Format | Size (unzipped) | Last update |
 |-------------|------------|----------|----------|-----------|------------|-------------|
 |Russia|[**Chechnya**](https://filebrowser.aeronetlab.space/s/hj9NzpVuZLu16LU/download)| 542,636| 15.7 | GeoPackage | 144.5MB | 2021 |
 |Russia|[**Tyva**](https://filebrowser.aeronetlab.space/s/AE2iIxGN8UoYfOU/download)| 74,696| 8.5 | GeoPackage | 19.0MB | 2021 |
-|Russia|[**Moscow & Moscow Region**](https://filebrowser.aeronetlab.space/s/9XRq7kvRQSreQu2/download)| 3,919,167 | 3.5 | GeoPackage | 863MB | 2021 |
+|Russia|[**Moscow & Moscow Region**](https://filebrowser.aeronetlab.space/s/9XRq7kvRQSreQu2/download)| 3,919,167 | 3.5 | GeoPackage | 863MB | 2021 | -->
 
 ### Uzbekistan ###
 
-|Region|Name | Feature Count | Format | Size (zipped) |
-|-------------|------------|----------|----------|-----------|
+|Region|Name | Feature Count | Format | Size (zipped) | Last update |
+|-------------|------------|----------|----------|-----------|------------|
 |Uzbekistan|[**Admin boundaries with population**](https://minio-production.mapflow.ai/public/data/kontur_boundaries_UZ_20220407.gpkg.gz?Content-Disposition=attachment%3B%20filename%3D%22data%2Fkontur_boundaries_UZ_20220407.gpkg.gz)| ~138| GeoPackage | 1.3MB |
 |Uzbekistan|[**Kontur population 500m**](https://minio-production.mapflow.ai/public/data/kontur_population_UZ_20220630.gpkg.gz?Content-Disposition=attachment%3B%20filename%3D%22data%2Fkontur_population_UZ_20220630.gpkg.gz)| ~108,000| GeoPackage | 6.5MB |
 |Tashkent|[**Geoalert building footprints**](https://minio-production.mapflow.ai/public/data/Tashkent_buildings_Mapflow.gpkg.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2FTashkent_buildings_Mapflow.gpkg.zip)| ~387,000| GeoPackage | 57MB |
-|Tashkent|[**Geoalert construction detections**](https://minio-production.mapflow.ai/public/data/Tashkent_constructions_Mapflow.geojson.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2FTashkent_constructions_Mapflow.geojson.zip)| ~515| GeoJSON | 114KB |
+|Tashkent|[**Geoalert construction detections**](https://filebrowser.mapflow.ai/s/WfIMymrbkNNIbiO)| ~515| GeoJSON | 114KB | ~2023 |
 |Uzbekistan|[**Geoalert building footprints, 4 cities**](https://minio-production.mapflow.ai/public/data/4cities%28Bukhara_Samarkand_Navoi_Chirchiq%29_Mapflow.gpkg.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2F4cities%28Bukhara_Samarkand_Navoi_Chirchiq%29_Mapflow.gpkg.zip)| ~301,000| GeoPackage | 31MB |
 |Uzbekistan|[**MS building footprints**](https://minio-production.mapflow.ai/public/data/Uzbekistan_MS_Buildings.gpkg.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2FUzbekistan_MS_Buildings.gpkg.zip)| ~6,500,000| GeoPackage | 684MB |
 |Uzbekistan|[**Places with population, Openstreetmap**](https://minio-production.mapflow.ai/public/data/Uzbekistan_places_OSM.geojson.zip?Content-Disposition=attachment%3B%20filename%3D%22data%2FUzbekistan_places_OSM.geojson.zip)| ~4,800| GeoPackage | 2MB |
@@ -75,4 +75,10 @@ The input imagery data is copyrighted by the data providers but is not distribut
 * [Mapflow.AI - AI mapping and imagery analysis platform](https://mapflow.ai)
 * [Microsoft building footprints](https://github.com/microsoft/USBuildingFootprints)
 * [RapID - Facebook editor for OpenStreetMap](https://github.com/facebookincubator/RapiD)
----------------------------
+
+## Updates
+
+| Date | Description |
+|-------------|------------|
+| 2024=07-18 | Remove Russia datasets as out-of-dated. Update Tashkent construction areas, data relevance – Sep, Oct, 2023 |
+----------------------------------
